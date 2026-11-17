@@ -1,0 +1,2980 @@
+[
+  {
+    "id": "T1-P1-a",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "a",
+    "question": "分别写出四个布尔表达式的真值表（truth table）。",
+    "answer": "\n按 $xy=00,01,10,11$ 枚举；横线覆盖整个括号时，先求括号内运算，再取反。\n\\[\n\\begin{array}{cc|cccc}\nx&y&f&g&h&k\\\\\\hline\n0&0&1&1&1&1\\\\\n0&1&1&1&0&0\\\\\n1&0&1&1&0&0\\\\\n1&1&0&0&0&0\n\\end{array}\n\\]\n四行已经覆盖全部输入，所以比较列即可判断函数是否相等。\n",
+    "key_points": [
+      "两个变量有4个输入赋值。",
+      "区分整体取反与分别取反。",
+      "函数相等要求每一行输出都相等。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P1",
+    "number": 1,
+    "qid": "Q001",
+    "notes": []
+  },
+  {
+    "id": "T1-P1-b",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "b",
+    "question": "求四个函数的 on-set，即使函数值等于1的全部输入赋值集合。",
+    "answer": "\n\\[\n\\operatorname{on}(f)=\\operatorname{on}(g)=\\{00,01,10\\},\\qquad\n\\operatorname{on}(h)=\\operatorname{on}(k)=\\{00\\}.\n\\]\n例如 $01$ 表示 $x=0,y=1$；集合元素是输入向量，不是输出值。\n",
+    "key_points": [
+      "on-set收集输出为1的输入。",
+      "位序必须明确。",
+      "on-set相同的完全指定函数相同。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P1",
+    "number": 2,
+    "qid": "Q002",
+    "notes": []
+  },
+  {
+    "id": "T1-P1-c",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "c",
+    "question": "为四个函数绘制箭头图（arrow diagram）：箭头由每个变量赋值指向其函数值。",
+    "answer": "\n$f$ 与 $g$ 的箭头相同：$00,01,10\\mapsto1$，$11\\mapsto0$。\n$h$ 与 $k$ 的箭头相同：$00\\mapsto1$，$01,10,11\\mapsto0$。\n下图给出两种完整箭头图；分别复制给对应的两个函数即可。\n",
+    "key_points": [
+      "每个输入恰有一个输出。",
+      "多个输入可以指向同一输出。",
+      "箭头图、真值表、on-set描述同一映射。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T1P1_arrows.png",
+        "caption": "左：f、g；右：h、k。正式答案局部图。",
+        "width_mm": 150
+      }
+    ],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P1",
+    "number": 3,
+    "qid": "Q003",
+    "notes": []
+  },
+  {
+    "id": "T1-P1-d",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "d",
+    "question": "哪些函数相等？该相等关系对应布尔代数的哪条定律？",
+    "answer": "\n\\[\nf=g,\\qquad h=k.\n\\]\n这是德摩根律（De Morgan's laws）：\n\\[\n\\overline{xy}=\\overline{x}+\\overline{y},\\qquad\n\\overline{x+y}=\\overline{x}\\,\\overline{y}.\n\\]\n整体取反时，AND与OR互换，且每个输入都取反。$f$ 与 $h$ 不相等，例如在 $xy=01$ 时分别为1和0。\n",
+    "key_points": [
+      "德摩根律同时改变运算符和文字极性。",
+      "不能只把AND换成OR而遗漏取反。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P1",
+    "number": 4,
+    "qid": "Q004",
+    "notes": []
+  },
+  {
+    "id": "T1-P1-e",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "e",
+    "question": "绘制四个函数的决策树（decision tree），先对x展开，再对y展开，即变量顺序为 $x\\prec y$。",
+    "answer": "\n对 $f,g$：$x=0$ 时余函数恒为1；$x=1$ 时余函数为 $\\overline y$，其 $y=0$ 分支为1、$y=1$ 分支为0。\n\n对 $h,k$：$x=1$ 时余函数恒为0；$x=0$ 时余函数为 $\\overline y$，其 $y=0$ 分支为1、$y=1$ 分支为0。\n\n下图将常量余函数直接作为叶节点。若要求完整两层树，可把常量1展开为两个均为1的y叶节点，把常量0展开为两个均为0的y叶节点；函数不变。\n",
+    "key_points": [
+      "按既定变量顺序做Shannon展开。",
+      "边上的0/1决定赋值，不能凭左右方向猜测。",
+      "两个后继相同的节点可以消去。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T1P1_trees.png",
+        "caption": "左树用于f、g，右树用于h、k。",
+        "width_mm": 150
+      }
+    ],
+    "lab_kind": "bdd",
+    "problem_id": "T1-P1",
+    "number": 5,
+    "qid": "Q005",
+    "notes": []
+  },
+  {
+    "id": "T1-P1-g",
+    "title": "二变量布尔函数的多种表示",
+    "tutorial": 1,
+    "problem": "1",
+    "sources": [
+      "1.pdf 第1至3页"
+    ],
+    "question_pages": [
+      5
+    ],
+    "answer_pages": [
+      8,
+      9,
+      10
+    ],
+    "context": "\n考虑四个函数 $f,g,h,k:\\{0,1\\}^2\\to\\{0,1\\}$，变量位序为 $xy$：\n\\[\nf=\\overline{xy},\\qquad g=\\overline{x}+\\overline{y},\\qquad\nh=\\overline{x+y},\\qquad k=\\overline{x}\\,\\overline{y}.\n\\]\n",
+    "figures": [],
+    "label": "g",
+    "question": "用二变量的四个0-cube（$xy,x\\overline y,\\overline x y,\\overline x\\overline y$）构造以下表达式：\n\\[\nxy,\\quad x\\overline y+\\overline x y,\\quad xy+\\overline x\\overline y,\\quad\nx,\\quad\\overline y,\\quad x+y,\\quad\\overline x+\\overline y.\n\\]\n对后四个表达式说明所用的布尔代数展开。",
+    "answer": "\n前三个表达式本身已由1个或2个0-cube组成。其余四个为：\n\\[\n\\begin{aligned}\nx&=x(y+\\overline y)=xy+x\\overline y,\\\\\n\\overline y&=(x+\\overline x)\\overline y=x\\overline y+\\overline x\\overline y,\\\\\nx+y&=xy+x\\overline y+\\overline x y,\\\\\n\\overline x+\\overline y&=\\overline x\\overline y+\\overline x y+x\\overline y.\n\\end{aligned}\n\\]\n在最后两行分别把每个一文字项补齐另一变量，再利用幂等律 $a+a=a$ 删除重复项。例如 $y=xy+\\overline x y$，所以 $x+y=(xy+x\\overline y)+(xy+\\overline x y)$。\n",
+    "key_points": [
+      "利用 $a+\\overline a=1$ 补齐缺失变量。",
+      "SOP的OR对应on-set取并集。",
+      "重复覆盖允许，重复项可用幂等律合并。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "cubes",
+    "problem_id": "T1-P1",
+    "number": 6,
+    "qid": "Q006",
+    "notes": []
+  },
+  {
+    "id": "T1-P2-c",
+    "title": "XOR与XNOR互为补函数",
+    "tutorial": 1,
+    "problem": "2",
+    "sources": [
+      "1.pdf 第4页"
+    ],
+    "question_pages": [
+      6
+    ],
+    "answer_pages": [
+      11
+    ],
+    "context": "\n令 $A=x\\overline y+\\overline x y$，$B=xy+\\overline x\\overline y$；分别为XOR与XNOR的表达式。\n",
+    "figures": [],
+    "label": "c",
+    "question": "仅用布尔代数定律证明 $AB=0$ 且 $A+B=1$。",
+    "answer": "\n先按分配律展开乘积：\n\\[\n\\begin{aligned}\nAB&=(x\\overline y+\\overline x y)(xy+\\overline x\\overline y)\\\\\n&=xx\\overline y y+x\\overline x\\overline y\\overline y\n +\\overline xxyy+\\overline x\\overline x y\\overline y\\\\\n&=0+0+0+0=0.\n\\end{aligned}\n\\]\n每个乘积项都含 $x\\overline x$ 或 $y\\overline y$。再求和：\n\\[\n\\begin{aligned}\nA+B&=x\\overline y+xy+\\overline x y+\\overline x\\overline y\\\\\n&=x(\\overline y+y)+\\overline x(y+\\overline y)\\\\\n&=x+\\overline x=1.\n\\end{aligned}\n\\]\n因此两者互斥且覆盖所有输入，$B=\\overline A$。\n",
+    "key_points": [
+      "互补需同时满足积为0、和为1。",
+      "分配律展开后寻找互补文字对。",
+      "XOR在两输入不同时为1，XNOR在相同时为1。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P2",
+    "number": 7,
+    "qid": "Q007",
+    "notes": []
+  },
+  {
+    "id": "T1-P3-a",
+    "title": "从最小项合并到1-cube和2-cube",
+    "tutorial": 1,
+    "problem": "3",
+    "sources": [
+      "1.pdf 第5至6页"
+    ],
+    "question_pages": [
+      7
+    ],
+    "answer_pages": [
+      13,
+      14
+    ],
+    "context": "\n函数 $f:\\{0,1\\}^3\\to\\{0,1\\}$ 的五个最小项为：\n\\[\n\\begin{aligned}\nm_0&=\\overline x\\overline y\\overline z,&m_2&=\\overline x y\\overline z,&m_4&=x\\overline y\\overline z,\\\\\nm_6&=xy\\overline z,&m_7&=xyz,&f&=m_0+m_2+m_4+m_6+m_7.\n\\end{aligned}\n\\]\n位序为 $xyz$，输出也记作 $w=f(x,y,z)$。\n",
+    "figures": [],
+    "label": "a",
+    "question": "求每个最小项及函数f的on-set，并写出f的完整真值表。",
+    "answer": "\n\\[\n\\operatorname{on}(m_0)=\\{000\\},\\quad\\operatorname{on}(m_2)=\\{010\\},\\quad\n\\operatorname{on}(m_4)=\\{100\\},\\quad\\operatorname{on}(m_6)=\\{110\\},\\quad\n\\operatorname{on}(m_7)=\\{111\\}.\n\\]\n\\[\n\\operatorname{on}(f)=\\{000,010,100,110,111\\}.\n\\]\n\\[\n\\begin{array}{ccc|c}x&y&z&f\\\\\\hline\n0&0&0&1\\\\0&0&1&0\\\\0&1&0&1\\\\0&1&1&0\\\\\n1&0&0&1\\\\1&0&1&0\\\\1&1&0&1\\\\1&1&1&1\n\\end{array}\n\\]\n",
+    "key_points": [
+      "最小项只覆盖一个输入点。",
+      "下标是按xyz解释的二进制编号。",
+      "函数on-set是各最小项集合的并集。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "truth-table",
+    "problem_id": "T1-P3",
+    "number": 8,
+    "qid": "Q008",
+    "notes": []
+  },
+  {
+    "id": "T1-P3-b",
+    "title": "从最小项合并到1-cube和2-cube",
+    "tutorial": 1,
+    "problem": "3",
+    "sources": [
+      "1.pdf 第5至6页"
+    ],
+    "question_pages": [
+      7
+    ],
+    "answer_pages": [
+      13,
+      14
+    ],
+    "context": "\n函数 $f:\\{0,1\\}^3\\to\\{0,1\\}$ 的五个最小项为：\n\\[\n\\begin{aligned}\nm_0&=\\overline x\\overline y\\overline z,&m_2&=\\overline x y\\overline z,&m_4&=x\\overline y\\overline z,\\\\\nm_6&=xy\\overline z,&m_7&=xyz,&f&=m_0+m_2+m_4+m_6+m_7.\n\\end{aligned}\n\\]\n位序为 $xyz$，输出也记作 $w=f(x,y,z)$。\n",
+    "figures": [],
+    "label": "b",
+    "question": "只使用1-cube合并，求文字数较少的表示；使用don’t-care符号写出简化的on-set。",
+    "answer": "\n把 $m_6$ 重复使用一次（幂等律），可分别合并：\n\\[\n\\begin{aligned}\nm_0+m_2&=\\overline x\\overline z,\\\\\nm_4+m_6&=x\\overline z,\\\\\nm_6+m_7&=xy.\n\\end{aligned}\n\\]\n所以 $f=\\overline x\\overline z+x\\overline z+xy$，共6个文字；三个1-cube分别为\n\\[\n\\{0\\ast0,\\ 1\\ast0,\\ 11\\ast\\}.\n\\]\n其中 $\\ast$ 表示该坐标可以取0或1，不是未知的函数值。\n",
+    "key_points": [
+      "相邻最小项只在一个变量上相反。",
+      "覆盖可以重叠，m6可参与两次合并。",
+      "1-cube有1个自由变量、覆盖2个顶点。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "cubes",
+    "problem_id": "T1-P3",
+    "number": 9,
+    "qid": "Q009",
+    "notes": []
+  },
+  {
+    "id": "T1-P3-c",
+    "title": "从最小项合并到1-cube和2-cube",
+    "tutorial": 1,
+    "problem": "3",
+    "sources": [
+      "1.pdf 第5至6页"
+    ],
+    "question_pages": [
+      7
+    ],
+    "answer_pages": [
+      13,
+      14
+    ],
+    "context": "\n函数 $f:\\{0,1\\}^3\\to\\{0,1\\}$ 的五个最小项为：\n\\[\n\\begin{aligned}\nm_0&=\\overline x\\overline y\\overline z,&m_2&=\\overline x y\\overline z,&m_4&=x\\overline y\\overline z,\\\\\nm_6&=xy\\overline z,&m_7&=xyz,&f&=m_0+m_2+m_4+m_6+m_7.\n\\end{aligned}\n\\]\n位序为 $xyz$，输出也记作 $w=f(x,y,z)$。\n",
+    "figures": [],
+    "label": "c",
+    "question": "进一步使用2-cube，求最简单的函数表示和简化on-set，并绘制门级实现（gate-level realization）。",
+    "answer": "\n\\[\nf=(\\overline x+x)\\overline z+xy=\\overline z+xy,\n\\qquad\\operatorname{on}(f)=\\{\\ast\\ast0,11\\ast\\}.\n\\]\n只有3个文字。$\\ast\\ast0$ 是覆盖全部 $z=0$ 顶点的2-cube；$11\\ast$ 是覆盖 $x=y=1$ 两顶点的1-cube。\n\n门级实现：一个AND计算 $xy$，对z取反，再用OR合成输出。图中OR输入端的小圆圈等效于z上的NOT。\n",
+    "key_points": [
+      "2-cube覆盖4个顶点，固定一个文字。",
+      "按文字数衡量此处化简结果。",
+      "输入反相泡泡等效于独立NOT门。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T1P3_gate.png",
+        "caption": "AND输出与反相z进入OR门；z输入带反相泡泡。",
+        "width_mm": 90
+      }
+    ],
+    "lab_kind": "cubes",
+    "problem_id": "T1-P3",
+    "number": 10,
+    "qid": "Q010",
+    "notes": []
+  },
+  {
+    "id": "T1-P3-d",
+    "title": "从最小项合并到1-cube和2-cube",
+    "tutorial": 1,
+    "problem": "3",
+    "sources": [
+      "1.pdf 第5至6页"
+    ],
+    "question_pages": [
+      7
+    ],
+    "answer_pages": [
+      13,
+      14
+    ],
+    "context": "\n函数 $f:\\{0,1\\}^3\\to\\{0,1\\}$ 的五个最小项为：\n\\[\n\\begin{aligned}\nm_0&=\\overline x\\overline y\\overline z,&m_2&=\\overline x y\\overline z,&m_4&=x\\overline y\\overline z,\\\\\nm_6&=xy\\overline z,&m_7&=xyz,&f&=m_0+m_2+m_4+m_6+m_7.\n\\end{aligned}\n\\]\n位序为 $xyz$，输出也记作 $w=f(x,y,z)$。\n",
+    "figures": [],
+    "label": "d",
+    "question": "在三变量立方体图（cube graph，n=3）中可视化函数f。",
+    "answer": "\n标记 $000,010,100,110,111$ 为on-set，其余三点为off-set。\n将 $000,010,100,110$ 围成固定 $z=0$ 的面（$\\ast\\ast0$）；再把 $110$ 与 $111$ 连成固定 $x=y=1$ 的边（$11\\ast$）。两者并集恰为全部on-set；它们在110重叠。\n",
+    "key_points": [
+      "cube图的边连接汉明距离为1的点。",
+      "面对应2-cube、边对应1-cube。",
+      "任何合并不得覆盖off-set点。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T1P3_cube.png",
+        "caption": "粗线面对应z=0，粗线边对应xy=1。",
+        "width_mm": 95
+      }
+    ],
+    "lab_kind": "cubes",
+    "problem_id": "T1-P3",
+    "number": 11,
+    "qid": "Q011",
+    "notes": []
+  },
+  {
+    "id": "T2-P1-a",
+    "title": "Quine–McCluskey最小化与覆盖",
+    "tutorial": 2,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第1至4页"
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      18,
+      19,
+      20
+    ],
+    "context": "\n给定 $f:\\{0,1\\}^4\\to\\{0,1\\}$，变量位序为 $xyzw$：\n\\[\n\\operatorname{on}(f)=\\{0000,0001,1000,0011,0101,0111,1110,1111\\},\n\\qquad f=\\sum m(0,1,8,3,5,7,14,15).\n\\]\n未列出的输入输出均为0；题目没有指定函数don’t-care输入。\n",
+    "figures": [],
+    "label": "a",
+    "question": "求函数的规范与或式CSOP（canonical sum of products）。",
+    "answer": "\n\\[\n\\begin{aligned}\nf={}&\\overline x\\overline y\\overline z\\overline w\n +\\overline x\\overline y\\overline z w\n +x\\overline y\\overline z\\overline w\\\\\n&+\\overline x\\overline yzw+\\overline xy\\overline zw+\\overline xyzw\n +xyz\\overline w+xyzw.\n\\end{aligned}\n\\]\n每项含4个文字，共8项、32个文字；每一项都对应给定on-set中的一个输入。\n",
+    "key_points": [
+      "CSOP只能由完整最小项组成。",
+      "0位写反变量，1位写原变量。",
+      "cube中的星号与题目给的函数don’t-care不是同一概念。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "quine",
+    "problem_id": "T2-P1",
+    "number": 12,
+    "qid": "Q012",
+    "notes": []
+  },
+  {
+    "id": "T2-P1-b",
+    "title": "Quine–McCluskey最小化与覆盖",
+    "tutorial": 2,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第1至4页"
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      18,
+      19,
+      20
+    ],
+    "context": "\n给定 $f:\\{0,1\\}^4\\to\\{0,1\\}$，变量位序为 $xyzw$：\n\\[\n\\operatorname{on}(f)=\\{0000,0001,1000,0011,0101,0111,1110,1111\\},\n\\qquad f=\\sum m(0,1,8,3,5,7,14,15).\n\\]\n未列出的输入输出均为0；题目没有指定函数don’t-care输入。\n",
+    "figures": [],
+    "label": "b",
+    "question": "使用Quine方法求全部主蕴含项（prime implicants）。写出合并过程和最终CompSOP。",
+    "answer": "\n第一轮由0-cube得到以下不同的1-cube：\n\\[\n\\begin{array}{c|c@{\\qquad}c|c}\n\\text{最小项对}&\\text{合并结果}&\\text{最小项对}&\\text{合并结果}\\\\\\hline\n(0,1)&000\\ast&(0,8)&\\ast000\\\\\n(1,3)&00\\ast1&(1,5)&0\\ast01\\\\\n(3,7)&0\\ast11&(5,7)&01\\ast1\\\\\n(7,15)&\\ast111&(14,15)&111\\ast\n\\end{array}\n\\]\n第二轮 $00\\ast1$ 与 $01\\ast1$ 合并成 $0\\ast\\ast1$；$0\\ast01$ 与 $0\\ast11$ 也产生同一个2-cube。没有进一步合法合并。\n\\[\n\\begin{array}{c|c|l}\n\\text{名称}&\\text{cube}&\\text{乘积项}\\\\\\hline\np_1&000\\ast&\\overline x\\overline y\\overline z\\\\\np_2&\\ast000&\\overline y\\overline z\\overline w\\\\\np_3&\\ast111&yzw\\\\\np_4&111\\ast&xyz\\\\\np_5&0\\ast\\ast1&\\overline xw\n\\end{array}\n\\]\n所有未被更大cube吸收的结果构成 $\\operatorname{CompSOP}(f)=p_1+p_2+p_3+p_4+p_5$，共14个文字。\n",
+    "key_points": [
+      "只有相同星号位置、恰好一个固定坐标相反的cube可合并。",
+      "一项不能再扩大才是prime implicant。",
+      "CompSOP包括全部主蕴含项，不等于最小覆盖。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "quine",
+    "problem_id": "T2-P1",
+    "number": 13,
+    "qid": "Q013",
+    "notes": []
+  },
+  {
+    "id": "T2-P1-c",
+    "title": "Quine–McCluskey最小化与覆盖",
+    "tutorial": 2,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第1至4页"
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      18,
+      19,
+      20
+    ],
+    "context": "\n给定 $f:\\{0,1\\}^4\\to\\{0,1\\}$，变量位序为 $xyzw$：\n\\[\n\\operatorname{on}(f)=\\{0000,0001,1000,0011,0101,0111,1110,1111\\},\n\\qquad f=\\sum m(0,1,8,3,5,7,14,15).\n\\]\n未列出的输入输出均为0；题目没有指定函数don’t-care输入。\n",
+    "figures": [],
+    "label": "c",
+    "question": "利用Quine–McCluskey覆盖步骤求MinSOP；给出覆盖表与选取理由。",
+    "answer": "\n沿用(b)的 $p_1,\\ldots,p_5$，覆盖表为：\n\\[\n\\begin{array}{c|cccccccc}\n &m_0&m_1&m_3&m_5&m_7&m_8&m_{14}&m_{15}\\\\\\hline\np_1&1&1&0&0&0&0&0&0\\\\\np_2&1&0&0&0&0&1&0&0\\\\\np_3&0&0&0&0&1&0&0&1\\\\\np_4&0&0&0&0&0&0&1&1\\\\\np_5&0&1&1&1&1&0&0&0\n\\end{array}\n\\]\n$m_8$ 只能由 $p_2$ 覆盖，$m_{14}$ 只能由 $p_4$ 覆盖，$m_3,m_5$ 只能由 $p_5$ 覆盖，所以三者均为必要主蕴含项，且已覆盖全部列。\n\n若 $\\tau_i=1$ 表示选取 $p_i$，覆盖条件化简为：\n\\[\n\\begin{aligned}\nC={}&(\\tau_1+\\tau_2)(\\tau_1+\\tau_5)\\tau_5\\tau_5\n(\\tau_3+\\tau_5)\\tau_2\\tau_4(\\tau_3+\\tau_4)\\\\\n={}&\\tau_2\\tau_4\\tau_5.\n\\end{aligned}\n\\]\n故唯一最小主覆盖为\n\\[\n\\operatorname{MinSOP}(f)=\\overline y\\overline z\\overline w+xyz+\\overline xw,\n\\]\n共3项、8个文字。\n",
+    "key_points": [
+      "有唯一1的列强制选取对应行。",
+      "选中后应划去已覆盖列，再继续覆盖。",
+      "必要项已覆盖所有列时，无需继续猜测。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "quine",
+    "problem_id": "T2-P1",
+    "number": 14,
+    "qid": "Q014",
+    "notes": []
+  },
+  {
+    "id": "T2-P1-d",
+    "title": "Quine–McCluskey最小化与覆盖",
+    "tutorial": 2,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第1至4页"
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      18,
+      19,
+      20
+    ],
+    "context": "\n给定 $f:\\{0,1\\}^4\\to\\{0,1\\}$，变量位序为 $xyzw$：\n\\[\n\\operatorname{on}(f)=\\{0000,0001,1000,0011,0101,0111,1110,1111\\},\n\\qquad f=\\sum m(0,1,8,3,5,7,14,15).\n\\]\n未列出的输入输出均为0；题目没有指定函数don’t-care输入。\n",
+    "figures": [],
+    "label": "d",
+    "question": "用四变量cube graph（n=4）可视化MinSOP的确定过程。",
+    "answer": "\n下图列出五个prime implicant；粗线突出所选 $p_2,p_4,p_5$。具体覆盖为：\n\\[\np_2:\\{0000,1000\\},\\quad p_4:\\{1110,1111\\},\\quad\np_5:\\{0001,0011,0101,0111\\}.\n\\]\n三者覆盖全部8个on-set点，且不包含任何off-set点。$p_1,p_3$ 可以省略。\n",
+    "key_points": [
+      "覆盖必须完整且不得扩入off-set。",
+      "2-cube可画成四点面，1-cube为一条边。",
+      "图上覆盖与覆盖表是同一问题的两种表示。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T2P1_cube.png",
+        "caption": "五个主蕴含项及粗线标记的最小覆盖。",
+        "width_mm": 145
+      }
+    ],
+    "lab_kind": "cubes",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "problem_id": "T2-P1",
+    "number": 15,
+    "qid": "Q015"
+  },
+  {
+    "id": "T2-P1-e",
+    "title": "Quine–McCluskey最小化与覆盖",
+    "tutorial": 2,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第1至4页"
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      18,
+      19,
+      20
+    ],
+    "context": "\n给定 $f:\\{0,1\\}^4\\to\\{0,1\\}$，变量位序为 $xyzw$：\n\\[\n\\operatorname{on}(f)=\\{0000,0001,1000,0011,0101,0111,1110,1111\\},\n\\qquad f=\\sum m(0,1,8,3,5,7,14,15).\n\\]\n未列出的输入输出均为0；题目没有指定函数don’t-care输入。\n",
+    "figures": [],
+    "label": "e",
+    "question": "绘制MinSOP的门级实现，并计算相对CSOP节省了多少个文字（literals）。",
+    "answer": "\n三个AND门分别实现 $\\overline y\\overline z\\overline w$、$xyz$、$\\overline xw$，输出接一个OR门。反变量可用输入反相器或图示输入泡泡实现。\n\\[\nL_{\\mathrm{CSOP}}=8\\times4=32,\\qquad\nL_{\\mathrm{MinSOP}}=3+3+2=8,\n\\]\n所以节省 $32-8=24$ 个文字，即原文字数的75\\%。这里统计表达式中的文字出现次数，不是简单统计独立反相器数。\n",
+    "key_points": [
+      "一项对应一个AND，项之间对应OR。",
+      "文字数按各项中的出现次数累计。",
+      "共享反相器的数量与SOP文字成本是不同指标。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T2P1_gate.png",
+        "caption": "三项AND–OR实现；泡泡表示对应输入取反。",
+        "width_mm": 85
+      }
+    ],
+    "lab_kind": "quine",
+    "problem_id": "T2-P1",
+    "number": 16,
+    "qid": "Q016",
+    "notes": []
+  },
+  {
+    "id": "T3-P1-a",
+    "title": "从一般SOP求全部主蕴含项",
+    "tutorial": 3,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第5至6页",
+      "3.pdf 第1页的覆盖表补充"
+    ],
+    "question_pages": [
+      27
+    ],
+    "answer_pages": [
+      30,
+      31
+    ],
+    "context": "\n\\[\n\\begin{aligned}\nf_1={}&yzw+xyz\\overline w+\\overline x\\overline yw+\\overline x\\overline zw+\\overline y\\overline z\\overline w,\\\\\nf_2={}&yzw+xyz+\\overline xyz\\overline w+x\\overline z\\overline w+\\overline x\\overline y\\overline z,\\\\\nf_3={}&\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4={}&xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n$f_1,f_2,f_3$ 的变量位序为 $xyzw$；$f_4$ 的变量位序为 $xyz$。\n",
+    "figures": [],
+    "label": "a",
+    "question": "用 $\\{0,1,\\ast\\}$ 中的cube字符串，写出四个函数的简写on-set。",
+    "answer": "\n每个乘积项固定它含有的变量，未出现的变量记作 $\\ast$：\n\\[\n\\begin{aligned}\nf_1&:\\{\\ast111,1110,00\\ast1,0\\ast01,\\ast000\\},\\\\\nf_2&:\\{\\ast111,111\\ast,0110,1\\ast00,000\\ast\\},\\\\\nf_3&:\\{0\\ast11,\\ast101,00\\ast1,100\\ast,1\\ast00\\},\\\\\nf_4&:\\{11\\ast,\\ast11,00\\ast,\\ast00\\}.\n\\end{aligned}\n\\]\n这里一个集合元素可能代表多个二值点；各cube可以重叠。\n",
+    "key_points": [
+      "未出现变量对应星号。",
+      "字符串位置必须与给定变量位序一致。",
+      "一般SOP中的项不必是最小项，也不必已是prime。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "resolution",
+    "problem_id": "T3-P1",
+    "number": 17,
+    "qid": "Q017",
+    "notes": []
+  },
+  {
+    "id": "T3-P1-b",
+    "title": "从一般SOP求全部主蕴含项",
+    "tutorial": 3,
+    "problem": "1",
+    "sources": [
+      "2.pdf 第5至6页",
+      "3.pdf 第1页的覆盖表补充"
+    ],
+    "question_pages": [
+      27
+    ],
+    "answer_pages": [
+      30,
+      31
+    ],
+    "context": "\n\\[\n\\begin{aligned}\nf_1={}&yzw+xyz\\overline w+\\overline x\\overline yw+\\overline x\\overline zw+\\overline y\\overline z\\overline w,\\\\\nf_2={}&yzw+xyz+\\overline xyz\\overline w+x\\overline z\\overline w+\\overline x\\overline y\\overline z,\\\\\nf_3={}&\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4={}&xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n$f_1,f_2,f_3$ 的变量位序为 $xyzw$；$f_4$ 的变量位序为 $xyz$。\n",
+    "figures": [],
+    "label": "b",
+    "question": "直接从给定SOP出发，用resolution的layer algorithm求四个函数的CompSOP（全部prime implicants），不要先把它们全部展开成CSOP。",
+    "answer": "\n使用共识规则 $xa+\\overline xb\\Rightarrow ab$；把新项加入原式并做吸收。若两个cube在两个或更多固定坐标上互相矛盾，则该次乘积共识为0，不能产生有效新项。\n\n以下给出逐层“加入本层共识后，吸收被覆盖项”的完整cube集合。第0层即(a)的原始集合。\n\\[\n\\begin{aligned}\nf_1^{(1)}:&\\{\\ast000,\\ast111,0\\ast01,0\\ast11,00\\ast1,000\\ast,01\\ast1,111\\ast\\},\\\\\nf_1^{(2)}:&\\{\\ast000,\\ast111,0\\ast\\ast1,000\\ast,111\\ast\\};\\\\[2pt]\nf_2^{(1)}:&\\{\\ast000,\\ast110,\\ast111,000\\ast,011\\ast,1\\ast00,11\\ast0,111\\ast\\},\\\\\nf_2^{(2)}:&\\{\\ast000,\\ast11\\ast,000\\ast,1\\ast00,11\\ast0\\};\\\\[2pt]\nf_3^{(1)}:&\\{\\ast001,\\ast101,0\\ast01,0\\ast11,00\\ast1,01\\ast1,1\\ast00,1\\ast01,100\\ast,110\\ast\\},\\\\\nf_3^{(2)}:&\\{\\ast\\ast01,0\\ast\\ast1,1\\ast0\\ast\\};\\\\[2pt]\nf_4^{(1)}:&\\{\\ast00,\\ast11,0\\ast1,00\\ast,1\\ast0,11\\ast\\}.\n\\end{aligned}\n\\]\n最后一层再做共识及吸收不产生改变，故得到：\n\\[\n\\begin{aligned}\n\\operatorname{CompSOP}(f_1)={}&\\overline x\\overline y\\overline z\n +\\overline y\\overline z\\overline w+yzw+xyz+\\overline xw,\\\\\n\\operatorname{CompSOP}(f_2)={}&yz+\\overline x\\overline y\\overline z\n +\\overline y\\overline z\\overline w+x\\overline z\\overline w+xy\\overline w,\\\\\n\\operatorname{CompSOP}(f_3)={}&\\overline xw+\\overline zw+x\\overline z,\\\\\n\\operatorname{CompSOP}(f_4)={}&xy+x\\overline z+yz+\\overline x\\overline y+\\overline xz+\\overline y\\overline z.\n\\end{aligned}\n\\]\n例如 $xy$ 与 $\\overline y\\overline z$ 对y做共识得到 $x\\overline z$；$yz$ 与 $\\overline x\\overline y$ 得到 $\\overline xz$。在 $f_4$ 中原四项与新增两项均为prime，即使其中一些项对于某个最小覆盖冗余，也仍必须出现在CompSOP。\n",
+    "key_points": [
+      "一般resolution可直接从不同大小的cube开始。",
+      "新共识项加入时保持函数等价，再吸收小cube。",
+      "主蕴含项闭包与最小主覆盖必须区分。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "resolution",
+    "problem_id": "T3-P1",
+    "number": 18,
+    "qid": "Q018",
+    "notes": []
+  },
+  {
+    "id": "T3-P3-任务",
+    "title": "启发式cube扩展、删除与可行性检查",
+    "tutorial": 3,
+    "problem": "3",
+    "sources": [
+      "3.pdf 第2至5页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      37
+    ],
+    "context": "\n考虑一般SOP\n\\[\nf_5=\\overline xy+xyz+\\overline x\\overline y\\overline z.\n\\]\n若 $f=c+h$，删除整个cube要求 $c\\subseteq h$；从 $c=c_l l$ 删除文字l、扩展到 $c_l$，要求 $c_l\\subseteq f$，等价于新增部分 $c_l\\overline l\\subseteq h$。\n",
+    "figures": [],
+    "label": "任务",
+    "question": "使用局部优化（local optimization）的cube removal和cube expansion，寻找尽可能小的覆盖。对每个采用的操作做可行性/恒真检查，并解释为什么该启发式方法一般不保证全局最优。",
+    "answer": "\n第一步，尝试从 $xyz$ 删除x得到 $yz$。固定 $y=z=1$ 后，\n\\[\n(f_5)_{yz}=\\overline x+x=1,\n\\]\n因此扩展合法，得到 $\\overline xy+yz+\\overline x\\overline y\\overline z$。\n作为反例，若从原 $xyz$ 删除z得到 $xy$，则 $(f_5)_{xy}=z\\not\\equiv1$；这会额外覆盖110，故不合法。\n\n第二步，从 $\\overline x\\overline y\\overline z$ 删除 $\\overline y$，得到 $\\overline x\\overline z$。固定 $x=0,z=0$：\n\\[\n(\\overline xy+yz+\\overline x\\overline y\\overline z)_{\\overline x\\overline z}\n=y+0+\\overline y=1.\n\\]\n故得到三个prime项 $\\overline xy+yz+\\overline x\\overline z$。\n\n第三步，删除整个 $c=\\overline xy$。剩余 $h=yz+\\overline x\\overline z$，并且\n\\[\nh_c=(yz+\\overline x\\overline z)_{\\overline xy}=z+\\overline z=1.\n\\]\n最终为\n\\[\n\\boxed{f_5=yz+\\overline x\\overline z}.\n\\]\n文字数沿路径 $8\\to7\\to6\\to4$ 下降。两个最终cube分别不可删除：$111$ 只由 $yz$ 覆盖，$000$ 只由 $\\overline x\\overline z$ 覆盖。也不能再删除其中任意文字，否则会包含off-set点。所以本例得到最小的两项、四文字覆盖。\n\n局部搜索并不一般保证最优：选择不同的扩展顺序可能停在不同的不可约覆盖；“不能再局部改善”不等于已与所有全局覆盖比较。约简（reduction）是暂时增加文字、缩小cube；仍须保证移除的区域由其他项覆盖，不能随意缩小。\n",
+    "key_points": [
+      "扩展检查新cube必须完全落在原on-set。",
+      "整项删除检查其所有点已被其余项覆盖。",
+      "余因子恒为1才证明包含关系；某一赋值为1不够。",
+      "不可约、prime cover、全局最小是不同概念。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "heuristic",
+    "problem_id": "T3-P3",
+    "number": 19,
+    "qid": "Q019",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-a",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "a",
+    "question": "绘制 $\\operatorname{ROBDD}(f_4)$，固定变量顺序 $x\\prec y\\prec z$。",
+    "answer": "\n先求x余因子：\n\\[\n(f_4)_x=y+\\overline z,\\qquad(f_4)_{\\overline x}=\\overline y+z.\n\\]\n左侧 $x=1$ 的y节点：$y=1\\to1$，$y=0\\to\\overline z$；右侧 $x=0$ 的y节点：$y=0\\to1$，$y=1\\to z$。其中 $\\overline z$ 节点的0边到1、1边到0；z节点的0边到0、1边到1。\n\n合并相同终端，删除两个后继相同的冗余节点后，得到下图。两个z节点分别实现z与其补，后继相反，不能合并。\n",
+    "key_points": [
+      "固定顺序后递归计算余因子。",
+      "约简包括合并同构子图和删除相同后继节点。",
+      "变量标签相同不代表节点可以合并。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T3P4_f4.png",
+        "caption": "f4的ROBDD，边标签为变量赋值。",
+        "width_mm": 120
+      }
+    ],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 20,
+    "qid": "Q020",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-b",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "b",
+    "question": "不重新计算余因子，直接绘制 $\\operatorname{ROBDD}(\\overline{f_4})$。",
+    "answer": "\n沿用(a)的全部内部节点和带标号边，只交换两个终端0与1。因为每一个输入沿相同路径到达原来的终端，而补函数只要求最终输出取反。\n\n不能交换所有边上的0与1；那相当于改变输入变量的解释，而不是仅对输出取反。\n",
+    "key_points": [
+      "补函数可以直接交换ROBDD终端值。",
+      "保持内部结构与变量顺序。",
+      "边标签与输出终端不可混淆。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T3P4_notf4.png",
+        "caption": "保留内部图，仅交换终端0和1。",
+        "width_mm": 75
+      }
+    ],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 21,
+    "qid": "Q021",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-c",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "c",
+    "question": "从 $\\operatorname{ROBDD}(\\overline{f_4})$ 读出 $\\overline{f_4}$ 的有效SOP，再得到 $f_4$ 的POS，最后由POS求 $f_4$ 的CompSOP。",
+    "answer": "\n沿补函数图中根到1的路径，只有 $101$ 与 $010$ 两个输入：\n\\[\n\\overline{f_4}=x\\overline yz+\\overline xy\\overline z.\n\\]\n由德摩根律得\n\\[\nf_4=(\\overline x+y+\\overline z)(x+\\overline y+z).\n\\]\n两括号相乘产生9个交叉乘积，其中 $x\\overline x$、$y\\overline y$、$z\\overline z$ 为0；其余六项为\n\\[\n\\operatorname{CompSOP}(f_4)=xy+x\\overline z+yz+\\overline x\\overline y+\\overline xz+\\overline y\\overline z.\n\\]\n这六项均是不能继续扩大的1-cube，覆盖立方体除010和101外的六个顶点。CompSOP保留全部六项，而不是只挑一个三项最小覆盖。\n",
+    "key_points": [
+      "根到1路径给出SOP，路径文字间做AND。",
+      "补函数SOP用德摩根律变成原函数POS。",
+      "展开POS时先消去矛盾项，再判断prime closure。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 22,
+    "qid": "Q022",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-d",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "d",
+    "question": "求 $(f_3)_y$ 和 $(f_3)_{\\overline y}$，说明由此能看出 $f_3$ 的什么性质。\n\n选做补问（原笔记中划去，本册保留）：该性质能否从 $f_3$ 的CompSOP看出？",
+    "answer": "\n直接代入：\n\\[\n\\begin{aligned}\n(f_3)_y&=\\overline xzw+\\overline zw+x\\overline z\\overline w,\\\\\n(f_3)_{\\overline y}&=\\overline xzw+\\overline xw+x\\overline z+x\\overline z\\overline w.\n\\end{aligned}\n\\]\n第二式直接吸收为 $\\overline xw+x\\overline z$。第一式中\n$\\overline xzw+\\overline zw=\\overline xw+\\overline zw$，再由\n$\\overline zw+x\\overline z\\overline w=\\overline zw+x\\overline z$，并删除冗余共识项 $\\overline zw$，也得到相同结果。因此\n\\[\n(f_3)_y=(f_3)_{\\overline y}=\\overline xw+x\\overline z,\n\\]\n故 $f_3$ 不依赖y：改变y而保持其他输入不变，输出不变。\n\n选做补问：其CompSOP为 $\\overline xw+\\overline zw+x\\overline z$，没有y或 $\\overline y$，因此也直接表明同一性质。\n",
+    "key_points": [
+      "相等的正负余因子证明变量无关。",
+      "先代入，再做吸收/共识，避免凭原式中是否出现y判断。",
+      "有文字y的未化简SOP仍可能表示与y无关的函数。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 23,
+    "qid": "Q023",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-e",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "e",
+    "question": "按顺序 $y\\prec x\\prec z\\prec w$ 绘制 $\\operatorname{ROBDD}(f_3)$ 与 $\\operatorname{ROBDD}(\\overline{f_3})$，利用(d)的结果。",
+    "answer": "\ny的两个余因子相同，所以y节点被消去，实际根为x。对 $f_3=\\overline xw+x\\overline z$，$x=1$ 后只检查z，$x=0$ 后只检查w。\n\\[\n\\begin{array}{c|cc}\n\\text{节点}&0\\text{边后继}&1\\text{边后继}\\\\\\hline\nx&w&z\\\\z&1&0\\\\w&0&1\n\\end{array}\n\\]\n补函数保留内部图并交换两个终端。虽然总顺序中 $z\\prec w$，在 $x=0$ 支路中可以跳过无关的z，并不违反有序性。\n",
+    "key_points": [
+      "无关变量在约简图中消失。",
+      "每条路径遵守相对顺序，但可以跳过变量。",
+      "补图交换终端即可。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/a_T3P4_f3.png",
+        "caption": "左：f3；右：其补函数。",
+        "width_mm": 140
+      }
+    ],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 24,
+    "qid": "Q024",
+    "notes": []
+  },
+  {
+    "id": "T3-P4-f",
+    "title": "ROBDD、余因子与从POS得到CompSOP",
+    "tutorial": 3,
+    "problem": "4",
+    "sources": [
+      "3.pdf 第6至8页"
+    ],
+    "question_pages": [
+      29
+    ],
+    "answer_pages": [
+      38
+    ],
+    "context": "\n考虑\n\\[\n\\begin{aligned}\nf_3&=\\overline xzw+y\\overline zw+\\overline x\\overline yw+x\\overline y\\overline z+x\\overline z\\overline w,\\\\\nf_4&=xy+yz+\\overline x\\overline y+\\overline y\\overline z.\n\\end{aligned}\n\\]\n此处 $(f)_y=f|_{y=1}$，$(f)_{\\overline y}=f|_{y=0}$，下标表示余因子（cofactor）。\n",
+    "figures": [],
+    "label": "f",
+    "question": "从 $\\operatorname{ROBDD}(\\overline{f_3})$ 读出补函数SOP，再求 $f_3$ 的POS，并由POS得到CompSOP。",
+    "answer": "\n补函数图中到1的路径为 $x=1,z=1$，以及 $x=0,w=0$，故\n\\[\n\\overline{f_3}=xz+\\overline x\\overline w.\n\\]\n取补得到\n\\[\nf_3=(\\overline x+\\overline z)(x+w).\n\\]\n展开并去掉 $x\\overline x=0$：\n\\[\n\\operatorname{CompSOP}(f_3)=\\overline xw+x\\overline z+\\overline zw.\n\\]\n$\\overline zw$ 是前两项的共识项，所以对于MinSOP可删除；但本题要求CompSOP，必须保留这个prime implicant。\n",
+    "key_points": [
+      "ROBDD跳过的变量不写进路径乘积。",
+      "POS展开后去掉矛盾项。",
+      "冗余的prime仍属于CompSOP。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T3-P4",
+    "number": 25,
+    "qid": "Q025",
+    "notes": []
+  },
+  {
+    "id": "T4-P3-a",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "四变量函数为\n\\[\n\\begin{aligned}\nf_1={}&xy+\\overline{x}\\,\\overline{y}+zw+\\overline{z}\\,\\overline{w}\\\\\n &+x\\overline{y}z\\overline{w}+x\\overline{y}\\,\\overline{z}w\n +\\overline{x}yz\\overline{w}+\\overline{x}y\\overline{z}w .\n\\end{aligned}\n\\]\n变量顺序为 $(x,y,z,w)$，$+$ 表示逻辑或。",
+    "figures": [],
+    "label": "a",
+    "question": "用归结／共识方法（resolution method）证明 $f_1$ 是恒真函数（tautology）。",
+    "answer": "SOP 中的共识规则是：已有 $xA+\\overline{x}B$ 时，可以加入 $AB$，函数不变。这里的“加入”是逻辑或，不是把旧项删掉。\n\n先利用原式中的项逐步得到：\n\\[\n\\begin{array}{c|c|c}\n\\text{第一项}&\\text{第二项}&\\text{共识项}\\\\ \\hline\nxy&\\overline{x}yz\\overline{w}&yz\\overline{w}\\\\\n\\overline{x}\\,\\overline{y}&x\\overline{y}z\\overline{w}&\\overline{y}z\\overline{w}\\\\\nyz\\overline{w}&\\overline{y}z\\overline{w}&z\\overline{w}\\\\\nxy&\\overline{x}y\\overline{z}w&y\\overline{z}w\\\\\n\\overline{x}\\,\\overline{y}&x\\overline{y}\\,\\overline{z}w&\\overline{y}\\,\\overline{z}w\\\\\ny\\overline{z}w&\\overline{y}\\,\\overline{z}w&\\overline{z}w\n\\end{array}\n\\]\n原式还有 $zw,\\overline{z}\\,\\overline{w}$，所以继续共识得到\n\\[\nzw+z\\overline{w}\\ \\Rightarrow\\ z,\\qquad\n\\overline{z}\\,\\overline{w}+\\overline{z}w\\ \\Rightarrow\\ \\overline{z},\n\\qquad z+\\overline{z}\\ \\Rightarrow\\ 1.\n\\]\n因此 $f_1=f_1+1=1$。不必列出每层所有可能共识项；一条合法推导链生成常数 $1$ 就足以证明恒真。",
+    "key_points": [
+      "SOP 共识 $xA+\\overline{x}B\\Rightarrow AB$ 保持原函数不变。",
+      "常数 $1$ 对应无文字项／全空间立方体。",
+      "写清每个新项来自哪两个旧项，避免只报结论。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "resolution",
+    "problem_id": "T4-P3",
+    "number": 26,
+    "qid": "Q026",
+    "notes": []
+  },
+  {
+    "id": "T4-P3-b",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "四变量函数为\n\\[\n\\begin{aligned}\nf_1={}&xy+\\overline{x}\\,\\overline{y}+zw+\\overline{z}\\,\\overline{w}\\\\\n &+x\\overline{y}z\\overline{w}+x\\overline{y}\\,\\overline{z}w\n +\\overline{x}yz\\overline{w}+\\overline{x}y\\overline{z}w .\n\\end{aligned}\n\\]\n变量顺序为 $(x,y,z,w)$，$+$ 表示逻辑或。",
+    "figures": [],
+    "label": "b",
+    "question": "按 $x\\prec y\\prec z\\prec w$ 构造 $\\mathrm{ROBDD}(f_1)$，计算构造中需要的余因子（cofactors）。",
+    "answer": "下标 $x$ 表示固定 $x=1$，下标 $\\overline{x}$ 表示固定 $x=0$。先展开：\n\\[\n\\begin{aligned}\n(f_1)_x&=y+zw+\\overline{z}\\,\\overline{w}\n                 +\\overline{y}z\\overline{w}+\\overline{y}\\,\\overline{z}w,\\\\\n(f_1)_{\\overline{x}}&=\\overline{y}+zw+\\overline{z}\\,\\overline{w}\n                 +yz\\overline{w}+y\\overline{z}w.\n\\end{aligned}\n\\]\n继续对 $y$ 分解：\n\\[\n(f_1)_{xy}=(f_1)_{\\overline{x}\\,\\overline{y}}=1,\n\\quad\n(f_1)_{x\\overline{y}}=(f_1)_{\\overline{x}y}\n=zw+z\\overline{w}+\\overline{z}w+\\overline{z}\\,\\overline{w}.\n\\]\n后一个函数对 $z=0,1$ 的余因子都为 $w+\\overline{w}=1$；再对 $w$ 分解，两个叶子均为 $1$。\n\n自底向上约简：合并所有终端 $1$；任何节点的 $0$ 边和 $1$ 边指向同一后继时删除该节点。于是 $w,z,y,x$ 节点全部消失，最终图只有一个终端：\n\\[\n f_1\\ \\longrightarrow\\ \\boxed{1}.\n\\]\n画出了展开树却没有删除相同后继节点，只能称为展开的 OBDD，尚不是最终 ROBDD。",
+    "key_points": [
+      "余因子是代入某个变量值后的剩余函数。",
+      "ROBDD 的两条边同后继时删除节点。",
+      "恒真函数的约简结果是单个 $1$ 终端。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T4-P3",
+    "number": 27,
+    "qid": "Q027",
+    "notes": []
+  },
+  {
+    "id": "T4-P3-c",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "四变量函数为\n\\[\n\\begin{aligned}\nf_1={}&xy+\\overline{x}\\,\\overline{y}+zw+\\overline{z}\\,\\overline{w}\\\\\n &+x\\overline{y}z\\overline{w}+x\\overline{y}\\,\\overline{z}w\n +\\overline{x}yz\\overline{w}+\\overline{x}y\\overline{z}w .\n\\end{aligned}\n\\]\n变量顺序为 $(x,y,z,w)$，$+$ 表示逻辑或。",
+    "figures": [],
+    "label": "c",
+    "question": "用立方图（cube graph）表示 $f_1$ 的 SOP。",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "answer": "按 $(x,y,z,w)$ 编码。四个二文字项对应四个二维面：\n\\[\nxy:11\\ast\\ast,\\quad \\overline{x}\\,\\overline{y}:00\\ast\\ast,\\quad\nzw:\\ast\\ast11,\\quad \\overline{z}\\,\\overline{w}:\\ast\\ast00.\n\\]\n它们未覆盖的四个顶点恰为\n\\[\n0101,\\quad0110,\\quad1001,\\quad1010.\n\\]\n原式最后四个四文字项分别填补这四个单点。因此四维立方体全部 $16$ 个顶点都在 on-set 中，图上没有 off-set 顶点。图中的面和单点可以继续合并，最终得到全空间立方体 $\\ast\\ast\\ast\\ast$，即常数 $1$。",
+    "key_points": [
+      "$k$ 个自由位表示维数为 $k$ 的立方体。",
+      "四变量二文字项是四个顶点组成的二维面。",
+      "恒真等价于全部顶点都被覆盖。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P3_cube.png",
+        "caption": "正式答案的四维立方图；各项合起来覆盖全空间。",
+        "width_mm": 140
+      }
+    ],
+    "lab_kind": "cubes",
+    "problem_id": "T4-P3",
+    "number": 28,
+    "qid": "Q028"
+  },
+  {
+    "id": "T4-P3-d",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "五变量函数为\n\\[\n\\begin{aligned}\nf_2={}&\\overline{x}zv+y\\overline{w}v+\\overline{x}z\\overline{w}\n       +y\\overline{z}\\,\\overline{w}\\\\\n &+xy+\\overline{x}\\,\\overline{y}+xz+\\overline{x}\\,\\overline{z}\n       +yz+\\overline{y}\\,\\overline{z}.\n\\end{aligned}\n\\]\n请保留 $v,w$ 的极性，勿把普通逻辑或与异或混淆。",
+    "figures": [],
+    "label": "d",
+    "question": "分析 $f_2$ 及其余因子对哪些变量是单极性（unate），并说明该结构如何帮助恒真证明。",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "answer": "把式子组织为\n\\[\nf_2=v\\varphi+\\overline{w}\\psi+g,\n\\quad\n\\varphi=\\overline{x}z+y\\overline{w},\\quad\n\\psi=\\overline{x}z+y\\overline{z},\n\\]\n\\[\ng=xy+\\overline{x}\\,\\overline{y}+xz+\\overline{x}\\,\\overline{z}\n  +yz+\\overline{y}\\,\\overline{z}.\n\\]\n$v$ 在给定 SOP 中只以正文字出现，所以\n\\[\n(f_2)_{\\overline{v}}\\subseteq(f_2)_v.\n\\]\n证明较小的 $(f_2)_{\\overline{v}}=1$，就能推出两个余因子都为 $1$，因而 $f_2=1$。这里的集合包含也可写成逐点不等式。\n\n代入 $v=0$ 后：\n\\[\n(f_2)_{\\overline{v}}=\\overline{w}\\psi+g.\n\\]\n$w$ 只以负文字出现，所以它是负单极性的，最小余因子出现在 $w=1$：\n\\[\n(f_2)_{\\overline{v}w}=g\n\\subseteq (f_2)_{\\overline{v}\\,\\overline{w}}=\\psi+g.\n\\]\n因此只需证明三变量函数 $g=1$。$g$ 的给定 SOP 中 $x,y,z$ 各自都有正、负文字，不能仅凭“只出现一种极性”的语法检查继续缩减。两种极性都出现也不意味着该函数一定不是 unate；化简后它实际是常数。",
+    "key_points": [
+      "正单极性恒真证明检查变量为 $0$ 的较小余因子。",
+      "负单极性恒真证明检查变量为 $1$ 的较小余因子。",
+      "语法极性检查是充分线索，不是 unateness 的完整判定。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T4-P3",
+    "number": 29,
+    "qid": "Q029"
+  },
+  {
+    "id": "T4-P3-e",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "五变量函数为\n\\[\n\\begin{aligned}\nf_2={}&\\overline{x}zv+y\\overline{w}v+\\overline{x}z\\overline{w}\n       +y\\overline{z}\\,\\overline{w}\\\\\n &+xy+\\overline{x}\\,\\overline{y}+xz+\\overline{x}\\,\\overline{z}\n       +yz+\\overline{y}\\,\\overline{z}.\n\\end{aligned}\n\\]\n请保留 $v,w$ 的极性，勿把普通逻辑或与异或混淆。",
+    "figures": [],
+    "label": "e",
+    "question": "利用 d) 的结构分析，分别用归结法（resolvent method）和 ROBDD 证明 $f_2$ 恒真。",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "answer": "由 d)，只需证明\n\\[\ng=xy+\\overline{x}\\,\\overline{y}+xz+\\overline{x}\\,\\overline{z}\n  +yz+\\overline{y}\\,\\overline{z}=1.\n\\]\n归结链可选为\n\\[\n\\begin{aligned}\nxy,\\ \\overline{y}\\,\\overline{z}&\\Rightarrow x\\overline{z},&\nx\\overline{z},\\ xz&\\Rightarrow x,\\\\\n\\overline{x}\\,\\overline{y},\\ yz&\\Rightarrow \\overline{x}z,&\n\\overline{x}z,\\ \\overline{x}\\,\\overline{z}&\\Rightarrow\\overline{x},\\\\\nx,\\ \\overline{x}&\\Rightarrow 1.\n\\end{aligned}\n\\]\n用 ROBDD，按 $x\\prec y\\prec z$：\n\\[\ng_x=y+z+\\overline{y}\\,\\overline{z},\\qquad\ng_{\\overline{x}}=\\overline{y}+\\overline{z}+yz.\n\\]\n$g_{xy}=1,\\ g_{x\\overline{y}}=z+\\overline{z}=1$；\n$g_{\\overline{x}\\,\\overline{y}}=1,\\ g_{\\overline{x}y}=z+\\overline{z}=1$。\n所有分支都终止于 $1$，约简后 $g\\to\\boxed{1}$。因此\n\\[\ng=1\\ \\Longrightarrow\\ (f_2)_{\\overline{v}}=1\n\\ \\Longrightarrow\\ f_2=1.\n\\]\n最终 $\\mathrm{ROBDD}(f_2)$ 同样只有终端 $1$；不必把五变量全展开。",
+    "key_points": [
+      "先用单极性缩小证明对象，再作共识或 BDD 分解。",
+      "两个方法必须证明同一个剩余函数。",
+      "常数函数的 ROBDD 不含决策节点。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "resolution",
+    "problem_id": "T4-P3",
+    "number": 30,
+    "qid": "Q030"
+  },
+  {
+    "id": "T4-P3-f",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "给定下图。输出 $v=h_1(x,y,z,w)$，$u=h_2(x,z,w)$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P3_shared.png",
+        "caption": "原题 Shared ROBDD；两根分别为 $h_1,h_2$。",
+        "width_mm": 60
+      }
+    ],
+    "label": "f",
+    "question": "从共享 ROBDD（Shared ROBDD）读出 $h_1,h_2$ 的 SOP，并化为 MinSOP。",
+    "answer": "一条从根到终端 $1$ 的路径给出一个乘积项：走 $1$ 边取正文字，走 $0$ 边取负文字，跳过的变量不出现在该项中。逐路径读得\n\\[\n\\begin{aligned}\nh_1&=xyw+x\\overline{y}zw+\\overline{x}zw,\\\\\nh_2&=xw+\\overline{x}zw.\n\\end{aligned}\n\\]\n从 $h_2$ 提取 $w$，利用 $x+\\overline{x}z=x+z$：\n\\[\nh_2=w(x+\\overline{x}z)=xw+zw.\n\\]\n对 $h_1$，先把 $x\\overline{y}+\\overline{x}$ 化为 $\\overline{y}+\\overline{x}$，再利用吸收：\n\\[\n\\begin{aligned}\nh_1&=w\\{xy+z(\\overline{y}+\\overline{x})\\}\\\\\n   &=w(xy+z)=xyw+zw.\n\\end{aligned}\n\\]\n最后一步也可按 $xy=0$ 与 $xy=1$ 两种情况验证。结果为\n\\[\n\\boxed{h_1=xyw+zw,\\qquad h_2=xw+zw}.\n\\]\n这两式分别有不可被对方项覆盖的 on-set 点，所以两个乘积项均不能删除。",
+    "key_points": [
+      "从根到 $1$ 的路径是 SOP 项，从根到 $0$ 的路径不是。",
+      "跳过变量意味着该变量为自由位。",
+      "共享节点不等于把两个输出相加；仍需分别从各自根读函数。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "bdd",
+    "problem_id": "T4-P3",
+    "number": 31,
+    "qid": "Q031",
+    "notes": []
+  },
+  {
+    "id": "T4-P3-g",
+    "title": "恒真证明与共享 ROBDD",
+    "tutorial": 4,
+    "problem": "3",
+    "sources": [
+      "7.pdf 第3至5页"
+    ],
+    "question_pages": [
+      41
+    ],
+    "answer_pages": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "context": "给定下图。输出 $v=h_1(x,y,z,w)$，$u=h_2(x,z,w)$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P3_shared.png",
+        "caption": "原题 Shared ROBDD；两根分别为 $h_1,h_2$。",
+        "width_mm": 60
+      }
+    ],
+    "label": "g",
+    "question": "根据 $h=(h_1,h_2)$ 的 MinSOP，画出只有二输入逻辑门的双输出电路。",
+    "answer": "先设共享中间项 $p=xw,\\ q=zw$，再令 $r=py$。于是\n\\[\np=\\mathrm{AND}(x,w),\\quad q=\\mathrm{AND}(z,w),\\quad\nr=\\mathrm{AND}(p,y),\n\\]\n\\[\nu=\\mathrm{OR}(p,q),\\qquad v=\\mathrm{OR}(r,q).\n\\]\n共用三个二输入 AND 门和两个二输入 OR 门，共五个门。$p$ 同时送往 $u$ 的 OR 门和计算 $r$ 的 AND 门；$q$ 同时送往两个输出 OR 门。$xyw$ 不能直接画成一个三输入 AND，因为题目明确限定二输入门。\n\n下图与这些连接相同，两个扇出点表示同一信号的共享使用。",
+    "key_points": [
+      "多输出电路可共享乘积项和中间结果。",
+      "三文字积必须分成两个二输入 AND。",
+      "区分导线交叉与真正的扇出连接点。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P3_circuit.png",
+        "caption": "五个二输入门实现共享双输出。",
+        "width_mm": 125
+      }
+    ],
+    "lab_kind": "multi-output",
+    "problem_id": "T4-P3",
+    "number": 32,
+    "qid": "Q032",
+    "notes": []
+  },
+  {
+    "id": "T4-P4-a",
+    "title": "4-LUT 函数分解",
+    "tutorial": 4,
+    "problem": "4",
+    "sources": [
+      "4.pdf 第3至7页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      52
+    ],
+    "context": "给定 MinSOP\n\\[\n\\begin{aligned}\nf={}&x_2x_3\\overline{x_4}\n+x_2\\overline{x_3}x_4\\overline{x_5}\n+\\overline{x_2}\\,\\overline{x_3}\\,\\overline{x_4}x_5\\\\\n&+x_3\\overline{x_4}\\,\\overline{x_5}+x_1.\n\\end{aligned}\n\\]\n希望用尽量少的 4-LUT 实现。一个 4-LUT 可实现至多四个输入变量的任意单输出布尔函数。",
+    "figures": [],
+    "label": "a",
+    "question": "分别按 $x_1\\prec x_5\\prec x_3\\prec x_2\\prec x_4$ 和 $x_2\\prec x_4\\prec x_5\\prec x_1\\prec x_3$ 构造 ROBDD。",
+    "answer": "按指定顺序作 Shannon 展开 $f=\\overline{x_i}f_{x_i=0}+x_i f_{x_i=1}$；同一层相同余因子共用节点，两个后继相同的节点删除。两种顺序的完整结果见图。\n\n第一种顺序先检查 $x_1$：由于原式含独立项 $x_1$，根的 $1$ 边直接指向终端 $1$。$0$ 边剩下四变量函数，再依次检查 $x_5,x_3,x_2,x_4$。\n\n第二种顺序先检查 $(x_2,x_4,x_5)$。到达切线时只有三种不同的后缀函数：\n\\[\nx_1,\\qquad x_1+\\overline{x_3},\\qquad x_1+x_3.\n\\]\n它们正好是分解时需要编码的三个等价类。图中第一种顺序有 $9$ 个非终端节点，第二种有 $10$ 个；节点少并不自动保证给定 LUT 输入约束下的分解最好。图中根旁标明分支约定：左侧为 $1$，右侧为 $0$，后续层遵循相同约定。",
+    "key_points": [
+      "固定顺序才能使用 ROBDD 的唯一性。",
+      "相同后缀函数可以共享，不是相同变量名就能合并。",
+      "切线下不同余因子数决定编码所需位数。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P4_bdds.png",
+        "caption": "两个指定变量顺序的正式 ROBDD。",
+        "width_mm": 155
+      }
+    ],
+    "lab_kind": "decomposition",
+    "problem_id": "T4-P4",
+    "number": 33,
+    "qid": "Q033",
+    "notes": []
+  },
+  {
+    "id": "T4-P4-b",
+    "title": "4-LUT 函数分解",
+    "tutorial": 4,
+    "problem": "4",
+    "sources": [
+      "4.pdf 第3至7页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      52
+    ],
+    "context": "给定 MinSOP\n\\[\n\\begin{aligned}\nf={}&x_2x_3\\overline{x_4}\n+x_2\\overline{x_3}x_4\\overline{x_5}\n+\\overline{x_2}\\,\\overline{x_3}\\,\\overline{x_4}x_5\\\\\n&+x_3\\overline{x_4}\\,\\overline{x_5}+x_1.\n\\end{aligned}\n\\]\n希望用尽量少的 4-LUT 实现。一个 4-LUT 可实现至多四个输入变量的任意单输出布尔函数。",
+    "figures": [],
+    "label": "b",
+    "question": "选择绑定变量（bound variables）与自由变量（free variables），说明所需 LUT 数以及选择理由。",
+    "answer": "设绑定变量数为 $b$，自由变量数为 $u$，切线处有 $L$ 个不同余因子，则至少需要 $r=\\lceil\\log_2L\\rceil$ 个编码位。标准不相交分解需满足\n\\[\nb\\le4,\\qquad r+u\\le4.\n\\]\n有压缩效果还需 $r<b$。按第二个 ROBDD 的课堂切分：\n\\[\n\\begin{array}{c|c|c|c}\n\\text{bound}&\\text{free}&L&r+u\\\\ \\hline\n\\{x_2\\}&\\{x_4,x_5,x_1,x_3\\}&2&1+4=5\\\\\n\\{x_2,x_4\\}&\\{x_5,x_1,x_3\\}&4&2+3=5\\\\\n\\{x_2,x_4,x_5\\}&\\{x_1,x_3\\}&3&2+2=4\\\\\n\\{x_2,x_4,x_5,x_1\\}&\\{x_3\\}&4&2+1=3\n\\end{array}\n\\]\n前两种超出末级输入数，后两种可实现；题 c) 固定采用第三行，两个编码函数加一个合成函数，共三个单输出 4-LUT。\n\n若严格按题头“尽量少 LUT”作全局选择，还有更省的合法方案。原式已经是\n\\[\nf=x_1+F(x_2,x_3,x_4,x_5).\n\\]\n取 bound $=\\{x_2,x_3,x_4,x_5\\}$、free $=\\{x_1\\}$，第一个 4-LUT 计算 $F$，第二个实现 $f=x_1+F$，共两个。$f$ 对五个变量都本质依赖，单个 4-LUT 不可能实现，故全局最少为两个。正式答案的“三个”是上述课堂切分的数量，不是所有划分的全局下界。",
+    "key_points": [
+      "编码位数由不同余因子数决定。",
+      "同时检查前级和末级 LUT 的输入数。",
+      "固定划分下最优与全部划分下最优应分清。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "decomposition",
+    "notes": "补充严格最小性：固定 free={x1,x3} 为三个 LUT；允许其他划分时可用两个 LUT。",
+    "problem_id": "T4-P4",
+    "number": 34,
+    "qid": "Q034"
+  },
+  {
+    "id": "T4-P4-c",
+    "title": "4-LUT 函数分解",
+    "tutorial": 4,
+    "problem": "4",
+    "sources": [
+      "4.pdf 第3至7页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      52
+    ],
+    "context": "给定 MinSOP\n\\[\n\\begin{aligned}\nf={}&x_2x_3\\overline{x_4}\n+x_2\\overline{x_3}x_4\\overline{x_5}\n+\\overline{x_2}\\,\\overline{x_3}\\,\\overline{x_4}x_5\\\\\n&+x_3\\overline{x_4}\\,\\overline{x_5}+x_1.\n\\end{aligned}\n\\]\n希望用尽量少的 4-LUT 实现。一个 4-LUT 可实现至多四个输入变量的任意单输出布尔函数。",
+    "figures": [],
+    "label": "c",
+    "question": "固定 $x_1,x_3$ 为自由变量，求分解函数 $h(x_2,x_4,x_5)$，使 $h$ 的不同输出值尽可能少。",
+    "answer": "固定绑定变量后，按自由变量函数是否相同分组，得到三个不可合并的类。以下采用正式答案编码；变量列顺序是 $(x_2,x_4,x_5)$：\n\\[\n\\begin{array}{c|c|c}\n(x_2,x_4,x_5)& f\\text{ 的余因子}&(z_1,z_2)=h\\\\ \\hline\n000&x_1+x_3&11\\\\\n001&x_1+\\overline{x_3}&10\\\\\n010&x_1&00\\\\\n011&x_1&00\\\\\n100&x_1+x_3&11\\\\\n101&x_1+x_3&11\\\\\n110&x_1+\\overline{x_3}&10\\\\\n111&x_1&00\n\\end{array}\n\\]\n三种余因子分别在适当的 $(x_1,x_3)$ 下给出不同输出，不能共用同一编码。因此需要三个不同编码值、至少两根二值输出线。编码 $01$ 从不出现。\n\n从表中分别最小化两列可得\n\\[\n\\boxed{z_1=x_2\\overline{x_5}+\\overline{x_4}},\\qquad\n\\boxed{z_2=\\overline{x_4}\\,\\overline{x_5}+x_2\\overline{x_4}}.\n\\]\n每个 $z_i$ 仅依赖三根绑定变量，可各用一个 4-LUT。手写笔记采用另一套合法编码，并把 $11$ 留空；它与这里的 $00,10,11$ 编码不能混用。",
+    "key_points": [
+      "先分余因子等价类，再给等价类编码。",
+      "三个等价类至少需要两位，未使用的编码是后级 DC。",
+      "编码不同会改变 h 和 g 的公式，但保持组合后的 f 相同。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "decomposition",
+    "problem_id": "T4-P4",
+    "number": 35,
+    "qid": "Q035",
+    "notes": []
+  },
+  {
+    "id": "T4-P4-d(α)",
+    "title": "4-LUT 函数分解",
+    "tutorial": 4,
+    "problem": "4",
+    "sources": [
+      "4.pdf 第3至7页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      52
+    ],
+    "context": "给定 MinSOP\n\\[\n\\begin{aligned}\nf={}&x_2x_3\\overline{x_4}\n+x_2\\overline{x_3}x_4\\overline{x_5}\n+\\overline{x_2}\\,\\overline{x_3}\\,\\overline{x_4}x_5\\\\\n&+x_3\\overline{x_4}\\,\\overline{x_5}+x_1.\n\\end{aligned}\n\\]\n希望用尽量少的 4-LUT 实现。一个 4-LUT 可实现至多四个输入变量的任意单输出布尔函数。",
+    "figures": [],
+    "label": "d(α)",
+    "question": "继续采用 c) 的编码，求合成函数 $g(h(x_2,x_4,x_5),x_1,x_3)$；本问不利用 don’t-care 化简。",
+    "answer": "仍采用正式答案编码：$00\\mapsto x_1$，$10\\mapsto x_1+\\overline{x_3}$，$11\\mapsto x_1+x_3$。先把未用编码 $01$ 的输出明确补为 $0$，得到完全指定函数：\n\\[\n\\begin{aligned}\ng_0={}&\\overline{z_1}\\,\\overline{z_2}x_1\n+z_1\\overline{z_2}(x_1+\\overline{x_3})\n+z_1z_2(x_1+x_3).\n\\end{aligned}\n\\]\n展开并吸收：\n\\[\n\\boxed{g_0=\\overline{z_2}x_1+z_1x_1\n+z_1\\overline{z_2}\\,\\overline{x_3}+z_1z_2x_3.}\n\\]\n对于 $01$，上述每项均为零；所以这里确实没有借助未使用编码扩大任何乘积项。在可达的三个编码上，分别还原三个余因子，因此 $g_0(h(x_2,x_4,x_5),x_1,x_3)=f$。\n\n“不利用 DC”需要对不可达编码选定明确输出；本解与正式答案一样采用补零约定。选择其他明确补值也能实现原函数，但必须说明。",
+    "key_points": [
+      "合成函数是按编码选余因子的多路选择函数。",
+      "未使用编码要先说明补值约定。",
+      "验证目标是 g 与 h 组合后等于原函数。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "decomposition",
+    "problem_id": "T4-P4",
+    "number": 36,
+    "qid": "Q036",
+    "notes": []
+  },
+  {
+    "id": "T4-P4-d(β)",
+    "title": "4-LUT 函数分解",
+    "tutorial": 4,
+    "problem": "4",
+    "sources": [
+      "4.pdf 第3至7页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      52
+    ],
+    "context": "给定 MinSOP\n\\[\n\\begin{aligned}\nf={}&x_2x_3\\overline{x_4}\n+x_2\\overline{x_3}x_4\\overline{x_5}\n+\\overline{x_2}\\,\\overline{x_3}\\,\\overline{x_4}x_5\\\\\n&+x_3\\overline{x_4}\\,\\overline{x_5}+x_1.\n\\end{aligned}\n\\]\n希望用尽量少的 4-LUT 实现。一个 4-LUT 可实现至多四个输入变量的任意单输出布尔函数。",
+    "figures": [],
+    "label": "d(β)",
+    "question": "继续采用 c) 的编码，利用未出现的编码作为 don’t-care，进一步化简合成函数 $g$。",
+    "answer": "编码 $01$ 永远不会由 $h$ 产生，故输入条件 $\\overline{z_1}z_2$ 是 DC。可以在这个区域任意指定后级输出，以便减少文字数。\n\n从上一问的完全指定式出发，$x_1$ 在三个有效编码处都使输出为 $1$，借助第四个编码可将相应项合并为 $x_1$。$z_1z_2x_3$ 也可借助 DC 扩展成 $z_2x_3$。最终\n\\[\n\\boxed{g=x_1+z_1\\overline{z_2}\\,\\overline{x_3}+z_2x_3.}\n\\]\n逐个有效编码检查：\n\\[\n00:\\ g=x_1,\\qquad10:\\ g=x_1+\\overline{x_3},\\qquad\n11:\\ g=x_1+x_3.\n\\]\n因此与原函数完全一致。后级输入为 $(z_1,z_2,x_1,x_3)$，正好四个；前级两个 LUT、后级一个 LUT，共三个。使用 DC 减少的是后级逻辑表达式复杂度，不会把该固定结构的 LUT 数从三个自动变成两个。",
+    "key_points": [
+      "DC 仅能用于 h 绝不会产生的编码。",
+      "化简后必须逐一检查所有有效编码。",
+      "表达式文字数与 LUT 数是不同成本。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "decomposition",
+    "problem_id": "T4-P4",
+    "number": 37,
+    "qid": "Q037",
+    "notes": []
+  },
+  {
+    "id": "T4-P5-a",
+    "title": "Mealy 状态机最小化与实现",
+    "tutorial": 4,
+    "problem": "5",
+    "sources": [
+      "4.pdf 第8至11页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      53,
+      54
+    ],
+    "context": "给定状态转移图。每条边的标记为输入／输出 $x/y$，状态为 $S_0,\\ldots,S_6$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P5_question.png",
+        "caption": "原题七状态 Mealy 自动机。",
+        "width_mm": 105
+      }
+    ],
+    "label": "a",
+    "question": "写出状态输出表（state output table）。",
+    "answer": "逐状态读取 $x=0$ 与 $x=1$ 的出边；表格内写“下一状态／当前输出”：\n\\[\n\\begin{array}{c|cc}\n\\text{现态}&x=0&x=1\\\\ \\hline\nS_0&S_1/0&S_2/0\\\\\nS_1&S_3/0&S_4/0\\\\\nS_2&S_5/0&S_6/0\\\\\nS_3&S_0/0&S_0/0\\\\\nS_4&S_0/1&S_0/0\\\\\nS_5&S_0/0&S_0/0\\\\\nS_6&S_0/1&S_0/0\n\\end{array}\n\\]\n尤其注意 $S_4,S_6$ 在 $x=0$ 时输出 $1$，而 $x=1$ 时输出 $0$。输出依赖现态和输入，所以这是 Mealy 机。",
+    "key_points": [
+      "边标记 x/y 的前一位是输入，后一位是输出。",
+      "每个状态每个输入必须恰有一个确定表项。",
+      "Mealy 输出依赖现态和输入。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "fsm",
+    "problem_id": "T4-P5",
+    "number": 38,
+    "qid": "Q038",
+    "notes": []
+  },
+  {
+    "id": "T4-P5-b",
+    "title": "Mealy 状态机最小化与实现",
+    "tutorial": 4,
+    "problem": "5",
+    "sources": [
+      "4.pdf 第8至11页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      53,
+      54
+    ],
+    "context": "给定状态转移图。每条边的标记为输入／输出 $x/y$，状态为 $S_0,\\ldots,S_6$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P5_question.png",
+        "caption": "原题七状态 Mealy 自动机。",
+        "width_mm": 105
+      }
+    ],
+    "label": "b",
+    "question": "最小化状态数，写出等价状态的划分细化过程。",
+    "answer": "以 $S_0$ 为起始状态时，其他六个状态都可以在一至两步内到达，因此没有可删除的不可达状态。\n\n先按所有输入下的输出是否相同分组：\n\\[\nP_1=\\{\\{S_0,S_1,S_2,S_3,S_5\\},\\{S_4,S_6\\}\\}.\n\\]\n检查同组状态的后继属于 $P_1$ 的哪一组。$S_1,S_2$ 在输入 $1$ 时进入第二组，与 $S_0,S_3,S_5$ 不同：\n\\[\nP_2=\\{\\{S_0,S_3,S_5\\},\\{S_1,S_2\\},\\{S_4,S_6\\}\\}.\n\\]\n再按 $P_2$ 检查，$S_0$ 的两个后继都在 $\\{S_1,S_2\\}$，而 $S_3,S_5$ 的后继在包含 $S_0$ 的组，所以再拆分：\n\\[\nP_3=\\{\\{S_0\\},\\{S_3,S_5\\},\\{S_1,S_2\\},\\{S_4,S_6\\}\\}.\n\\]\n按 $P_3$ 再细化不变，故划分稳定。最小状态数为 $4$，等价关系为\n\\[\nS_1\\sim S_2,\\qquad S_3\\sim S_5,\\qquad S_4\\sim S_6.\n\\]\n仅仅“当前输出相同”不足以合并；还必须保证所有未来输入序列的输出相同。",
+    "key_points": [
+      "先删除不可达状态，再细化等价类。",
+      "同输入输出相同且后继落入同一等价类，才可继续保留在一组。",
+      "划分不再变化时停止。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "fsm",
+    "problem_id": "T4-P5",
+    "number": 39,
+    "qid": "Q039",
+    "notes": []
+  },
+  {
+    "id": "T4-P5-c",
+    "title": "Mealy 状态机最小化与实现",
+    "tutorial": 4,
+    "problem": "5",
+    "sources": [
+      "4.pdf 第8至11页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      53,
+      54
+    ],
+    "context": "给定状态转移图。每条边的标记为输入／输出 $x/y$，状态为 $S_0,\\ldots,S_6$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P5_question.png",
+        "caption": "原题七状态 Mealy 自动机。",
+        "width_mm": 105
+      }
+    ],
+    "label": "c",
+    "question": "画出最小化状态转移图，并写出最小化状态输出表。",
+    "answer": "用各类代表状态命名：\n$A=\\{S_0\\}$、$B=\\{S_3,S_5\\}$、$C=\\{S_1,S_2\\}$、$D=\\{S_4,S_6\\}$。最小化表为\n\\[\n\\begin{array}{c|cc}\n\\text{现态}&x=0&x=1\\\\ \\hline\nA&C/0&C/0\\\\\nB&A/0&A/0\\\\\nC&B/0&D/0\\\\\nD&A/1&A/0\n\\end{array}\n\\]\n图中正式答案沿用代表名 $S_0,S_3,S_1,S_4$，它们分别对应 $A,B,C,D$。合并后的边必须保持原输入和输出，尤其不能把 $D\\to A$ 的 $0/1$ 与 $1/0$ 写成同一输出。",
+    "key_points": [
+      "最小化保留外部输入输出行为。",
+      "代表状态名只是命名选择。",
+      "合并边时仍需完整保留输入／输出标签。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P5_minimized.png",
+        "caption": "四状态最小 Mealy 机。",
+        "width_mm": 70
+      }
+    ],
+    "lab_kind": "fsm",
+    "problem_id": "T4-P5",
+    "number": 40,
+    "qid": "Q040",
+    "notes": []
+  },
+  {
+    "id": "T4-P5-d",
+    "title": "Mealy 状态机最小化与实现",
+    "tutorial": 4,
+    "problem": "5",
+    "sources": [
+      "4.pdf 第8至11页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      53,
+      54
+    ],
+    "context": "给定状态转移图。每条边的标记为输入／输出 $x/y$，状态为 $S_0,\\ldots,S_6$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P5_question.png",
+        "caption": "原题七状态 Mealy 自动机。",
+        "width_mm": 105
+      }
+    ],
+    "label": "d",
+    "question": "选择状态编码，求状态转移函数和输出函数。",
+    "answer": "本解统一采用正式答案的两位编码：\n\\[\nA=S_0:00,\\quad C=S_1/S_2:01,\\quad\nB=S_3/S_5:10,\\quad D=S_4/S_6:11.\n\\]\n手写笔记把 $B,C$ 的编码互换；两种都合法，但真值表、方程和电路必须使用同一套。\n\n令现态为 $(s_1,s_2)$，下一状态为 $(z_1,z_2)$。编码后的真值表：\n\\[\n\\begin{array}{ccc|ccc}\ns_1&s_2&x&z_1&z_2&y\\\\ \\hline\n0&0&0&0&1&0\\\\\n0&0&1&0&1&0\\\\\n0&1&0&1&0&0\\\\\n0&1&1&1&1&0\\\\\n1&0&0&0&0&0\\\\\n1&0&1&0&0&0\\\\\n1&1&0&0&0&1\\\\\n1&1&1&0&0&0\n\\end{array}\n\\]\n按每列的 on-set 最小化：\n\\[\n\\boxed{z_1=\\overline{s_1}s_2,\\qquad\nz_2=\\overline{s_1}\\,\\overline{s_2}+x\\overline{s_1},\\qquad\ny=\\overline{x}s_1s_2.}\n\\]\n时钟到来时 $s_1^{t+1}=z_1^t,\\ s_2^{t+1}=z_2^t$；输出 $y^t$ 由现态和当前输入直接计算。",
+    "key_points": [
+      "四个状态至少需要两位编码。",
+      "下一状态逻辑与当前输出逻辑分开计算。",
+      "编码变化必须同步修改方程，不能混用答案。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "fsm",
+    "problem_id": "T4-P5",
+    "number": 41,
+    "qid": "Q041",
+    "notes": []
+  },
+  {
+    "id": "T4-P5-e",
+    "title": "Mealy 状态机最小化与实现",
+    "tutorial": 4,
+    "problem": "5",
+    "sources": [
+      "4.pdf 第8至11页"
+    ],
+    "question_pages": [
+      42
+    ],
+    "answer_pages": [
+      53,
+      54
+    ],
+    "context": "给定状态转移图。每条边的标记为输入／输出 $x/y$，状态为 $S_0,\\ldots,S_6$。",
+    "figures": [
+      {
+        "file": "assets/b_T4P5_question.png",
+        "caption": "原题七状态 Mealy 自动机。",
+        "width_mm": 105
+      }
+    ],
+    "label": "e",
+    "question": "画出该自动机的电路实现。",
+    "answer": "用两个共同时钟驱动的 D 触发器保存 $s_1,s_2$。第一个 D 输入接 $z_1=\\overline{s_1}s_2$；第二个 D 输入接\n$z_2=\\overline{s_1}\\,\\overline{s_2}+x\\overline{s_1}$。把两触发器的 Q 输出反馈到组合逻辑输入端。输出电路实现 $y=\\overline{x}s_1s_2$。\n\n结构可分为下一状态逻辑、两位状态寄存器和输出逻辑。时钟只连到存储元件，不作为上述组合逻辑的普通数据输入。本图采用 d) 的正式编码；如果希望从 $S_0$ 开始运行，两寄存器初态应为 $00$。原题没有给复位端，图中不额外假设异步复位。\n\n图中的小圆圈表示输入反相。两个 D 触发器输出的反馈是跨时钟的状态反馈，不能直接把 $z_i$ 当作同一时刻的 $s_i$。",
+    "key_points": [
+      "D 触发器实现 s(t+1)=z(t)。",
+      "组合逻辑算下一状态，寄存器保存当前状态。",
+      "Mealy 输出允许直接依赖输入 x。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P5_circuit.png",
+        "caption": "采用正式答案状态编码的两位同步电路。",
+        "width_mm": 64
+      }
+    ],
+    "lab_kind": "fsm",
+    "problem_id": "T4-P5",
+    "number": 42,
+    "qid": "Q042",
+    "notes": []
+  },
+  {
+    "id": "T4-P6-a",
+    "title": "多输出逻辑与共享蕴含项",
+    "tutorial": 4,
+    "problem": "6",
+    "sources": [
+      "4.pdf 第1至2页"
+    ],
+    "question_pages": [
+      43
+    ],
+    "answer_pages": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "context": "给定三对函数，每对分别用一个双输出电路实现：\n\\[\n\\begin{aligned}\nf_1&=\\overline{x}\\,\\overline{z}+xyz,&\nf_2&=\\overline{y}z+\\overline{x}y\\overline{z},\\\\\ng_1&=xy\\overline{w}+x\\overline{z}+\\overline{y}\\,\\overline{z}\\,\\overline{w},&\ng_2&=yzw+xw+x\\overline{y}z,\\\\\nh_1&=x\\overline{y}\\,\\overline{w}+xyz+x\\overline{z}w,&\nh_2&=\\overline{y}\\,\\overline{z}\\,\\overline{w}+x\\overline{y}w+\n\\overline{x}\\,\\overline{y}z.\n\\end{aligned}\n\\]\n$f$ 对使用变量顺序 $(x,y,z)$；$g,h$ 对使用 $(x,y,z,w)$。$g,h$ 两对在手写笔记中划去，本册保留为选做。",
+    "figures": [],
+    "label": "a",
+    "question": "分别求 $f_1\\cap f_2$、$g_1\\cap g_2$、$h_1\\cap h_2$，找出可供双输出共享的蕴含项（multiple implicants）。",
+    "answer": "共享项必须同时属于两个输出的 on-set，故求逻辑交集，也就是两函数相乘。展开后消去含 $x\\overline{x}$ 等矛盾文字的项，再吸收：\n\\[\n\\begin{aligned}\nm_f=f_1f_2\n&=(\\overline{x}\\,\\overline{z}+xyz)\n  (\\overline{y}z+\\overline{x}y\\overline{z})\n=\\boxed{\\overline{x}y\\overline{z}},\\\\\nm_g=g_1g_2&=\\boxed{x\\overline{z}w},\\\\\nm_h=h_1h_2\n&=x\\overline{y}\\,\\overline{z}\\,\\overline{w}\n +x\\overline{y}\\,\\overline{z}w\n=\\boxed{x\\overline{y}\\,\\overline{z}}.\n\\end{aligned}\n\\]\n相应共享立方体为\n\\[\nm_f:010,\\qquad m_g:1\\ast01,\\qquad m_h:100\\ast.\n\\]\n例如 $g$ 对的公共 on-set 只有 $1001,1101$，它们只在 $y$ 上不同，合成 $1\\ast01$。$h$ 对的公共点为 $1000,1001$，消去 $w$。交集的素蕴含项可能不是任意单个输出的素蕴含项；它仍可能降低双输出总成本。",
+    "key_points": [
+      "共享乘积项必须是两个输出的共同蕴含项。",
+      "求共享候选使用交集 f1f2，不是并集。",
+      "共享候选可以比单输出素蕴含项更小。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "multi-output",
+    "notes": "f 对为课堂讲解；g、h 对原笔记中划去，本册补全为选做。",
+    "problem_id": "T4-P6",
+    "number": 43,
+    "qid": "Q043"
+  },
+  {
+    "id": "T4-P6-b",
+    "title": "多输出逻辑与共享蕴含项",
+    "tutorial": 4,
+    "problem": "6",
+    "sources": [
+      "4.pdf 第1至2页"
+    ],
+    "question_pages": [
+      43
+    ],
+    "answer_pages": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "context": "给定三对函数，每对分别用一个双输出电路实现：\n\\[\n\\begin{aligned}\nf_1&=\\overline{x}\\,\\overline{z}+xyz,&\nf_2&=\\overline{y}z+\\overline{x}y\\overline{z},\\\\\ng_1&=xy\\overline{w}+x\\overline{z}+\\overline{y}\\,\\overline{z}\\,\\overline{w},&\ng_2&=yzw+xw+x\\overline{y}z,\\\\\nh_1&=x\\overline{y}\\,\\overline{w}+xyz+x\\overline{z}w,&\nh_2&=\\overline{y}\\,\\overline{z}\\,\\overline{w}+x\\overline{y}w+\n\\overline{x}\\,\\overline{y}z.\n\\end{aligned}\n\\]\n$f$ 对使用变量顺序 $(x,y,z)$；$g,h$ 对使用 $(x,y,z,w)$。$g,h$ 两对在手写笔记中划去，本册保留为选做。",
+    "figures": [],
+    "label": "b",
+    "question": "求所有六个函数的完整 SOP（CompSOP，即所有素蕴含项之和）。",
+    "answer": "$f_1,f_2,g_1,g_2$ 的给定式已经包含各自全部素蕴含项：\n\\[\n\\begin{aligned}\n\\mathrm{CompSOP}(f_1)&=\\overline{x}\\,\\overline{z}+xyz,\\\\\n\\mathrm{CompSOP}(f_2)&=\\overline{y}z+\\overline{x}y\\overline{z},\\\\\n\\mathrm{CompSOP}(g_1)&=xy\\overline{w}+x\\overline{z}\n+\\overline{y}\\,\\overline{z}\\,\\overline{w},\\\\\n\\mathrm{CompSOP}(g_2)&=yzw+xw+x\\overline{y}z.\n\\end{aligned}\n\\]\n对 $h_1,h_2$，每个给定的三项式还缺少三个共识项：\n\\[\n\\begin{aligned}\n\\mathrm{CompSOP}(h_1)={}&\nx\\overline{y}\\,\\overline{w}+xyz+x\\overline{z}w\\\\\n&+x\\overline{y}\\,\\overline{z}+xz\\overline{w}+xyw,\\\\\n\\mathrm{CompSOP}(h_2)={}&\n\\overline{y}\\,\\overline{z}\\,\\overline{w}+x\\overline{y}w+\n\\overline{x}\\,\\overline{y}z\\\\\n&+x\\overline{y}\\,\\overline{z}\n+\\overline{x}\\,\\overline{y}\\,\\overline{w}+\\overline{y}zw .\n\\end{aligned}\n\\]\n例如 $x\\overline{y}\\,\\overline{w}$ 与 $x\\overline{z}w$ 对 $w$ 做共识得到 $x\\overline{y}\\,\\overline{z}$。这些六个三文字项各自都不能再扩大而不碰到 off-set，因此都是素蕴含项。CompSOP 要保留所有素蕴含项；即使某项在当前覆盖中冗余，也不能因此从 CompSOP 中删除。",
+    "key_points": [
+      "CompSOP 包含全部素蕴含项，不等于最小覆盖。",
+      "共识可生成给定 SOP 中没有的新素蕴含项。",
+      "素蕴含项不能扩大，但仍可能在一个覆盖中冗余。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "multi-output",
+    "problem_id": "T4-P6",
+    "number": 44,
+    "qid": "Q044",
+    "notes": []
+  },
+  {
+    "id": "T4-P6-c",
+    "title": "多输出逻辑与共享蕴含项",
+    "tutorial": 4,
+    "problem": "6",
+    "sources": [
+      "4.pdf 第1至2页"
+    ],
+    "question_pages": [
+      43
+    ],
+    "answer_pages": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "context": "给定三对函数，每对分别用一个双输出电路实现：\n\\[\n\\begin{aligned}\nf_1&=\\overline{x}\\,\\overline{z}+xyz,&\nf_2&=\\overline{y}z+\\overline{x}y\\overline{z},\\\\\ng_1&=xy\\overline{w}+x\\overline{z}+\\overline{y}\\,\\overline{z}\\,\\overline{w},&\ng_2&=yzw+xw+x\\overline{y}z,\\\\\nh_1&=x\\overline{y}\\,\\overline{w}+xyz+x\\overline{z}w,&\nh_2&=\\overline{y}\\,\\overline{z}\\,\\overline{w}+x\\overline{y}w+\n\\overline{x}\\,\\overline{y}z.\n\\end{aligned}\n\\]\n$f$ 对使用变量顺序 $(x,y,z)$；$g,h$ 对使用 $(x,y,z,w)$。$g,h$ 两对在手写笔记中划去，本册保留为选做。",
+    "figures": [],
+    "label": "c",
+    "question": "利用共享蕴含项，为三对函数分别寻找最优覆盖。以实现乘积项的文字总数为成本，同一共享项只计一次。",
+    "answer": "对每对函数，将单输出的素蕴含项及 a) 的共同蕴含项作为候选；同一个物理乘积项不因连接到两个输出而重复计文字数。\n\n$f$ 对：覆盖 $f_1$ 的点 $000$ 必须保留 $\\overline{x}\\,\\overline{z}$，点 $111$ 必须保留 $xyz$；$f_2$ 的 $001,101$ 由 $\\overline{y}z$ 覆盖，$010$ 由 $m_f$ 覆盖。因此\n\\[\nf_1=\\overline{x}\\,\\overline{z}+xyz,\\qquad f_2=\\overline{y}z+m_f .\n\\]\n也可把已计算的 $m_f$ 接到 $f_1$ 的 OR 端，但它在 $f_1$ 中被 $\\overline{x}\\,\\overline{z}$ 吸收。四个不同乘积项的成本为 $2+3+2+3=10$。\n\n$g$ 对：选择 $m_g=x\\overline{z}w$ 后，两输出的剩余点分别为\n\\[\n\\begin{array}{c|c|c}\n&\\text{剩余 on-set}&\\text{再选择的两项}\\\\ \\hline\ng_1&0000,1000,1100,1110&\n\\overline{y}\\,\\overline{z}\\,\\overline{w},\\ xy\\overline{w}\\\\\ng_2&0111,1010,1011,1111&\nyzw,\\ x\\overline{y}z\n\\end{array}\n\\]\n故\n\\[\ng_1=xy\\overline{w}+\\overline{y}\\,\\overline{z}\\,\\overline{w}+m_g,\n\\qquad g_2=yzw+x\\overline{y}z+m_g.\n\\]\n共五个三文字项，成本 $15$。不用共同项时两输出各需 $8$ 个文字，总成本 $16$；选择共同项后，上表的剩余覆盖不可少于每输出两项，故 $15$ 最优。\n\n$h$ 对：选择 $m_h=x\\overline{y}\\,\\overline{z}$，同时覆盖两个输出的 $1000,1001$。剩余覆盖为\n\\[\n\\begin{array}{c|c|c}\n&\\text{剩余 on-set}&\\text{再选择的两项}\\\\ \\hline\nh_1&1010,1101,1110,1111&xz\\overline{w},\\ xyw\\\\\nh_2&0000,0010,0011,1011&\n\\overline{x}\\,\\overline{y}\\,\\overline{w},\\ \\overline{y}zw\n\\end{array}\n\\]\n所以\n\\[\nh_1=xz\\overline{w}+xyw+m_h,\\qquad\nh_2=\\overline{x}\\,\\overline{y}\\,\\overline{w}+\\overline{y}zw+m_h.\n\\]\n成本也是五个三文字项，即 $15$。每个输出有六个 on-set 点，每个素蕴含项覆盖两个点；选择共享项后仍各有四点，需要至少两个三文字项，因此达到下界。不要在选完共享项后任意保留原来的三项，这可能得到不必要的 $21$ 文字覆盖。",
+    "key_points": [
+      "优化的是全电路不同乘积项的文字总数。",
+      "共享项选定后，重新计算尚未覆盖的点。",
+      "启发式覆盖不保证最小，需比较成本或给出下界。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "multi-output",
+    "problem_id": "T4-P6",
+    "number": 45,
+    "qid": "Q045",
+    "notes": []
+  },
+  {
+    "id": "T4-P6-d",
+    "title": "多输出逻辑与共享蕴含项",
+    "tutorial": 4,
+    "problem": "6",
+    "sources": [
+      "4.pdf 第1至2页"
+    ],
+    "question_pages": [
+      43
+    ],
+    "answer_pages": [
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "context": "给定三对函数，每对分别用一个双输出电路实现：\n\\[\n\\begin{aligned}\nf_1&=\\overline{x}\\,\\overline{z}+xyz,&\nf_2&=\\overline{y}z+\\overline{x}y\\overline{z},\\\\\ng_1&=xy\\overline{w}+x\\overline{z}+\\overline{y}\\,\\overline{z}\\,\\overline{w},&\ng_2&=yzw+xw+x\\overline{y}z,\\\\\nh_1&=x\\overline{y}\\,\\overline{w}+xyz+x\\overline{z}w,&\nh_2&=\\overline{y}\\,\\overline{z}\\,\\overline{w}+x\\overline{y}w+\n\\overline{x}\\,\\overline{y}z.\n\\end{aligned}\n\\]\n$f$ 对使用变量顺序 $(x,y,z)$；$g,h$ 对使用 $(x,y,z,w)$。$g,h$ 两对在手写笔记中划去，本册保留为选做。",
+    "figures": [],
+    "label": "d",
+    "question": "判断哪些函数对适合采用共享蕴含项；用立方图说明，并画出得到的双输出电路。",
+    "answer": "成本比较如下。只对输入文字计成本，同一个共享乘积项计算一次：\n\\[\n\\begin{array}{c|c|c|c}\n\\text{函数对}&\\text{两个独立 MinSOP}&\\text{共享实现}&\\text{文字节省}\\\\ \\hline\nf_1,f_2&5+5=10&5+3+2=10&0\\\\\ng_1,g_2&8+8=16&6+3+6=15&1\\\\\nh_1,h_2&9+9=18&6+3+6=15&3\n\\end{array}\n\\]\n$g,h$ 对按此成本模型有益；$f$ 对没有节省，额外共享连接还可能增加布线负担。\n\n立方图里 $m_f$ 是单点 $010$；$m_g$ 是连接 $1001,1101$ 的边；$m_h$ 是连接 $1000,1001$ 的边。双输出实现把同一共享乘积项送到两个输出 OR 门。图中的 $f_1$ 共享输入是冗余连接，可删除而不改变函数。\n\n电路应使用 c) 的最终覆盖：每个被选中的立方体一个 AND 项，每个输出一个 OR 汇合，共同项通过扇出供两个输出使用。本题没有二输入门限制；若实现库仅有二输入门，再把多输入 AND/OR 分解即可。",
+    "key_points": [
+      "可共享不代表一定节省成本。",
+      "两输出覆盖重合点的成本只计算一次。",
+      "文字成本是课程模型，实际面积时延还受扇出与布线影响。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T4P6_f_cube.png",
+        "caption": "$f$ 对：公共点为 $010$。",
+        "width_mm": 145
+      },
+      {
+        "file": "assets/b_T4P6_g_cube.png",
+        "caption": "$g$ 对：共享立方体 $1\\ast01$。",
+        "width_mm": 95
+      },
+      {
+        "file": "assets/b_T4P6_h_cube.png",
+        "caption": "$h$ 对：共享立方体 $100\\ast$。",
+        "width_mm": 99
+      },
+      {
+        "file": "assets/b_T4P6_circuits.png",
+        "caption": "三组双输出电路，顺序为 f、g、h。",
+        "width_mm": 155
+      }
+    ],
+    "lab_kind": "multi-output",
+    "problem_id": "T4-P6",
+    "number": 46,
+    "qid": "Q046",
+    "notes": []
+  },
+  {
+    "id": "T5-P1-a",
+    "title": "NAND 型 SR 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第1至3页"
+    ],
+    "question_pages": [
+      60
+    ],
+    "answer_pages": [
+      64,
+      65
+    ],
+    "context": "下图为两个交叉耦合 NAND 门构成的 SR-latch。输入为低有效的 $\\overline R,\\overline S$，输出为 $Q,Q_n$；门分别记为 Nand\\_a、Nand\\_b。各小题的延迟条件独立使用。",
+    "figures": [
+      {
+        "file": "assets/c_T5P1.png",
+        "caption": "原题锁存器电路，输入上的横线表示低有效。",
+        "width_mm": 68
+      }
+    ],
+    "label": "a",
+    "question": "用布尔逻辑建立描述锁存器逻辑功能的查找表（look-up table）。锁存器正确工作必须满足什么输入条件？",
+    "answer": "稳定工作时的功能表为：\\begingroup\n\\begin{center}\\begin{tabular}{ccccc}\n\\hline\n$\\overline R$ & $\\overline S$ & $Q^+$ & $Q_n^+$ & 功能 \\\\\n\\hline\n1 & 1 & $Q$ & $Q_n$ & 保持原状态 \\\\\n0 & 1 & 0 & 1 & 复位 \\\\\n1 & 0 & 1 & 0 & 置位 \\\\\n0 & 0 & 1 & 1 & 禁止输入 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n当两个低有效输入都为 0 时，两输出都被强制为 1，不再互补；若随后同时回到 1，最终状态依赖实际延迟，不能唯一确定。因此有效输入条件为\n\\[\n\\overline R+\\overline S=1.\n\\]\n这里的加号是逻辑 OR，不是算术加法。",
+    "key_points": [
+      "NAND 型 SR 锁存器的置位、复位输入低有效。",
+      "保持状态依赖反馈，不能用无记忆的组合真值表替代。",
+      "禁止态的关键风险是释放之后状态不确定。"
+    ],
+    "lab_kind": "simulation",
+    "problem_id": "T5-P1",
+    "number": 47,
+    "qid": "Q047",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T5-P1-b",
+    "title": "NAND 型 SR 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第1至3页"
+    ],
+    "question_pages": [
+      60
+    ],
+    "answer_pages": [
+      64,
+      65
+    ],
+    "context": "下图为两个交叉耦合 NAND 门构成的 SR-latch。输入为低有效的 $\\overline R,\\overline S$，输出为 $Q,Q_n$；门分别记为 Nand\\_a、Nand\\_b。各小题的延迟条件独立使用。",
+    "figures": [
+      {
+        "file": "assets/c_T5P1.png",
+        "caption": "原题锁存器电路，输入上的横线表示低有效。",
+        "width_mm": 68
+      }
+    ],
+    "label": "b",
+    "question": "建立同时考虑门延迟（gate delay）和连线延迟（wire delay）的电路仿真模型。",
+    "answer": "把每个 NAND 门分成“零延迟逻辑函数”与其后的门延迟元件，分别标为 $\\tau_{da}$、$\\tau_{db}$。再为两条外部输入线、两条输出线及两条交叉反馈线分别设置 $\\tau_{w1},\\ldots,\\tau_{w6}$，如下图。\n\n例如，上门的逻辑输出先由当前到达其输入端的两个值计算，再经 $\\tau_{da}$ 到达门输出；该输出经反馈线延迟后才作用于下门。输出观测点的连线延迟与反馈线延迟必须分别处理，不能把所有延迟随意加在同一个输出上。",
+    "key_points": [
+      "门的布尔功能与时间延迟是两个独立层次。",
+      "反馈支路和外部输出支路可以有不同连线延迟。",
+      "输入到达时刻决定门重新计算的时刻。"
+    ],
+    "lab_kind": "simulation",
+    "answer_figures": [
+      {
+        "file": "assets/c_T5P1_model.png",
+        "caption": "门延迟与六条连线延迟的完整仿真模型。",
+        "width_mm": 115
+      }
+    ],
+    "problem_id": "T5-P1",
+    "number": 48,
+    "qid": "Q048",
+    "notes": []
+  },
+  {
+    "id": "T5-P1-c",
+    "title": "NAND 型 SR 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第1至3页"
+    ],
+    "question_pages": [
+      60
+    ],
+    "answer_pages": [
+      64,
+      65
+    ],
+    "context": "下图为两个交叉耦合 NAND 门构成的 SR-latch。输入为低有效的 $\\overline R,\\overline S$，输出为 $Q,Q_n$；门分别记为 Nand\\_a、Nand\\_b。各小题的延迟条件独立使用。",
+    "figures": [
+      {
+        "file": "assets/c_T5P1.png",
+        "caption": "原题锁存器电路，输入上的横线表示低有效。",
+        "width_mm": 68
+      }
+    ],
+    "label": "c",
+    "question": "求 $Q^t=f(Q^{t-1},\\overline R^{\\,t-1},\\overline S^{\\,t-1})$。所有连线延迟 $\\tau_w=0$；Nand\\_a 的门延迟为 0，Nand\\_b 的门延迟为 1 个基本时间单位。",
+    "answer": "\\[\n\\begin{aligned}\nQ^t&=\\overline{\\overline S^{\\,t-1}Q_n^{t-1}},\\\\\nQ_n^{t-1}&=\\overline{\\overline R^{\\,t-1}Q^{t-1}},\\\\\nQ^t&=\\overline{\\overline S^{\\,t-1}\\,\n \\overline{\\overline R^{\\,t-1}Q^{t-1}}}\\\\\n&=\\overline{\\overline S^{\\,t-1}}+\n\\overline R^{\\,t-1}Q^{t-1}.\n\\end{aligned}\n\\]\n第二行没有额外时间后移，因为上门延迟为 0；下门的一单位延迟统一体现为第一行的 $t-1$。双重横线 $\\overline{\\overline S}$ 表示对低有效输入变量再取反。",
+    "key_points": [
+      "先分别写两个门的含时间下标方程，再消去内部变量。",
+      "延迟为 0 的门不会额外增加一个时间步。",
+      "区分低有效变量名上的横线和逻辑运算的取反。"
+    ],
+    "lab_kind": "simulation",
+    "problem_id": "T5-P1",
+    "number": 49,
+    "qid": "Q049",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T5-P1-d",
+    "title": "NAND 型 SR 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第1至3页"
+    ],
+    "question_pages": [
+      60
+    ],
+    "answer_pages": [
+      64,
+      65
+    ],
+    "context": "下图为两个交叉耦合 NAND 门构成的 SR-latch。输入为低有效的 $\\overline R,\\overline S$，输出为 $Q,Q_n$；门分别记为 Nand\\_a、Nand\\_b。各小题的延迟条件独立使用。",
+    "figures": [
+      {
+        "file": "assets/c_T5P1.png",
+        "caption": "原题锁存器电路，输入上的横线表示低有效。",
+        "width_mm": 68
+      }
+    ],
+    "label": "d",
+    "question": "对单一输入事件进行事件驱动仿真，列出各仿真步骤、求值元件、生成事件，并画波形。所有连线延迟为 0；Nand\\_a 延迟 1，Nand\\_b 延迟 2。\n\n初态：$\\overline R=1,\\overline S=1,Q=0$。输入事件为\n\\[\nE_E=(\\overline S,0,0,1),\n\\]\n四元组依次表示信号名、新值、生成时刻、执行时刻。",
+    "answer": "初始稳定状态为 $Q_n=1,Q=0$。按执行时刻处理事件：\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccccc}\n\\hline\n$t$ & $\\overline R$ & $\\overline S$ & $Q_n$ & $Q$ & 求值元件 & 生成事件 \\\\\n\\hline\n0 & 1 & 1 & 1 & 0 & 初始化 & $(\\overline S,0,0,1)$ \\\\\n1 & 1 & 0 & 1 & 0 & Nand\\_b & $(Q,1,1,3)$ \\\\\n3 & 1 & 0 & 1 & 1 & Nand\\_a & $(Q_n,0,3,4)$ \\\\\n4 & 1 & 0 & 0 & 1 & Nand\\_b & 无新事件 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n在 $t=1$，下门计算出 $Q$ 应变为 1，但须等到 $t=3$ 执行。随后上门在 $t=4$ 把 $Q_n$ 改为 0。下门再次求值得到的仍是 $Q=1$，故不生成新事件，仿真稳定。",
+    "key_points": [
+      "事件生成时刻与执行时刻不同。",
+      "只在输出值发生变化时安排新的有效事件。",
+      "一次输入变化可经反馈引起多轮门求值。"
+    ],
+    "lab_kind": "simulation",
+    "answer_figures": [
+      {
+        "file": "assets/c_T5P1_wave.png",
+        "caption": "最终波形：S 输入在1变化，Q在3变化，Qn在4变化。",
+        "width_mm": 92
+      }
+    ],
+    "problem_id": "T5-P1",
+    "number": 50,
+    "qid": "Q050",
+    "notes": []
+  },
+  {
+    "id": "T5-P1-e",
+    "title": "NAND 型 SR 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第1至3页"
+    ],
+    "question_pages": [
+      60
+    ],
+    "answer_pages": [
+      64,
+      65
+    ],
+    "context": "下图为两个交叉耦合 NAND 门构成的 SR-latch。输入为低有效的 $\\overline R,\\overline S$，输出为 $Q,Q_n$；门分别记为 Nand\\_a、Nand\\_b。各小题的延迟条件独立使用。",
+    "figures": [
+      {
+        "file": "assets/c_T5P1.png",
+        "caption": "原题锁存器电路，输入上的横线表示低有效。",
+        "width_mm": 68
+      }
+    ],
+    "label": "e",
+    "question": "建立采用三值逻辑 $\\{0,1,X\\}$ 的二输入 NAND 门查找表，其中 $X$ 表示未知值。",
+    "answer": "\\begingroup\n\\begin{center}\\begin{tabular}{cccc}\n\\hline\nNAND & 0 & 1 & X \\\\\n\\hline\n0 & 1 & 1 & 1 \\\\\n1 & 1 & 0 & X \\\\\nX & 1 & X & X \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n有一个确定的 0 输入时，AND 的结果已确定为 0，因此 NAND 输出确定为 1；只有两个输入都确定为 1 时，NAND 输出确定为 0。其余无法唯一确定的情况记为 $X$。",
+    "key_points": [
+      "未知值不等于 0，也不等于逻辑故障。",
+      "控制值可以压住未知输入。",
+      "三值表表达的是确定性，而不是任取一个可能结果。"
+    ],
+    "lab_kind": "simulation",
+    "problem_id": "T5-P1",
+    "number": 51,
+    "qid": "Q051",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T5-P2-a",
+    "title": "D 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "2",
+    "sources": [
+      "7.pdf 第6至7页"
+    ],
+    "question_pages": [
+      61
+    ],
+    "answer_pages": [
+      65
+    ],
+    "context": "给定静态触发 D 锁存器（D-latch）。所有逻辑门的传播延迟均为 $\\tau=10$，不额外计导线延迟。$\\overline{R},\\overline{S}$ 是低有效输入。",
+    "figures": [
+      {
+        "file": "assets/b_T5P2_circuit.png",
+        "caption": "原题 D 锁存器。",
+        "width_mm": 108
+      }
+    ],
+    "label": "a",
+    "question": "说明相对于 SR 锁存器新增的逻辑门如何改变电路功能。",
+    "answer": "左边接在一起的两个 NAND 输入实现反相器：\n\\[\nD_n=\\overline{D},\\qquad\n\\overline{R}=\\overline{D_nC},\\qquad\n\\overline{S}=\\overline{DC}.\n\\]\n忽略过渡过程、待各门稳定后：\n\\[\n\\begin{array}{cc|cc|c}\nC&D&\\overline{R}&\\overline{S}&\\text{行为}\\\\ \\hline\n0&0&1&1&\\text{保持原状态}\\\\\n0&1&1&1&\\text{保持原状态}\\\\\n1&0&0&1&Q=0\\\\\n1&1&1&0&Q=1\n\\end{array}\n\\]\n因此 $C=1$ 时锁存器透明，$Q$ 经传播延迟跟随 $D$；$C=0$ 时两个控制端均无效，交叉反馈保存之前的状态。稳态特征方程为\n\\[\nQ_{\\text{next}}=CD+\\overline{C}Q.\n\\]\n稳态下 $\\overline{R}+\\overline{S}=1$，避免独立 SR 输入同时有效的非法组合。但有限且不同的路径延迟仍可产生短暂重叠，b) 中 $70\\le t<80$ 就会出现两控制端同时为 $0$。不能把稳态方程当作无延迟波形。\n\n这里是电平敏感锁存器，不是只在时钟边沿采样的 D 触发器。",
+    "key_points": [
+      "C=1 透明，C=0 保持。",
+      "低有效 NAND SR 输入与高有效 NOR SR 输入的极性相反。",
+      "稳态逻辑关系与带延迟的瞬态波形要区分。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "simulation",
+    "problem_id": "T5-P2",
+    "number": 52,
+    "qid": "Q052",
+    "notes": []
+  },
+  {
+    "id": "T5-P2-b",
+    "title": "D 锁存器与事件驱动仿真",
+    "tutorial": 5,
+    "problem": "2",
+    "sources": [
+      "7.pdf 第6至7页"
+    ],
+    "question_pages": [
+      61
+    ],
+    "answer_pages": [
+      65
+    ],
+    "context": "给定静态触发 D 锁存器（D-latch）。所有逻辑门的传播延迟均为 $\\tau=10$，不额外计导线延迟。$\\overline{R},\\overline{S}$ 是低有效输入。",
+    "figures": [
+      {
+        "file": "assets/b_T5P2_circuit.png",
+        "caption": "原题 D 锁存器。",
+        "width_mm": 108
+      }
+    ],
+    "label": "b",
+    "question": "初态 $Q=0,Q_n=1$，其余节点在 $D=C=0$ 下已稳定。输入 $D$ 在 $t=60$ 上升、$160$ 下降；$C$ 在 $t=20$ 上升、$120$ 下降、$200$ 再上升。仿真至 $t=260$，画出 $D_n,\\overline{R},\\overline{S},Q_n,Q$ 的波形并列出关键事件。",
+    "answer": "初态为 $(D_n,\\overline{R},\\overline{S},Q_n,Q)=(1,1,1,1,0)$。输入变化仅触发直接扇出门重新求值，输出在 $10$ 个时间单位后变化：\n\\[\n\\begin{array}{r|l}\nt&\\text{该时刻实际执行的事件}\\\\ \\hline\n20&C:0\\to1\\\\\n30&\\overline{R}:1\\to0\\\\\n60&D:0\\to1\\\\\n70&D_n:1\\to0,\\quad\\overline{S}:1\\to0\\\\\n80&\\overline{R}:0\\to1,\\quad Q:0\\to1\\\\\n90&Q_n:1\\to0\\\\\n120&C:1\\to0\\\\\n130&\\overline{S}:0\\to1\\\\\n160&D:1\\to0\\\\\n170&D_n:0\\to1\\\\\n200&C:0\\to1\\\\\n210&\\overline{R}:1\\to0\\\\\n220&Q_n:0\\to1\\\\\n230&Q:1\\to0\n\\end{array}\n\\]\n完整的高电平区间为\n\\[\n\\begin{array}{c|l}\n\\text{信号}&[0,260]\\text{ 内为 }1\\text{ 的区间}\\\\ \\hline\nD_n&[0,70)\\cup[170,260]\\\\\n\\overline{R}&[0,30)\\cup[80,210)\\\\\n\\overline{S}&[0,70)\\cup[130,260]\\\\\nQ_n&[0,90)\\cup[220,260]\\\\\nQ&[80,230)\n\\end{array}\n\\]\n例如 $D@60$ 同时触发反相器与置位控制门，故 $D_n,\\overline{S}@70$ 一起变化；$D_n@70$ 再触发 $\\overline{R}@80$。$Q@80$ 经反馈使 $Q_n@90$ 下降。$D@160$ 发生在 $C=0$，所以输出保持到 $C@200$ 重新使能之后。\n\n注意 $70$ 至 $80$ 两控制端暂时同时为 $0$，$80$ 至 $90$ 两输出暂时同时为 $1$；有限延迟下不能逐时刻强制 $Q_n=\\overline{Q}$。原手写事件表只写到 $70$，这里已完成后续所有事件。",
+    "key_points": [
+      "事件执行时间等于输入事件时间加门延迟。",
+      "交叉反馈每经过一个门再增加一次延迟。",
+      "使能关闭期间数据改变不应改变已保存的输出。",
+      "Q 与 Qn 在过渡期间不必互补。"
+    ],
+    "answer_figures": [
+      {
+        "file": "assets/b_T5P2_wave_answer.png",
+        "caption": "完整延迟波形，虚线箭头显示事件传播。",
+        "width_mm": 155
+      }
+    ],
+    "lab_kind": "simulation",
+    "notes": "原笔记事件表在 t=70 后省略，本册补全至 t=260。",
+    "problem_id": "T5-P2",
+    "number": 53,
+    "qid": "Q053"
+  },
+  {
+    "id": "T7-P1-a",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "a",
+    "question": "根据多路选择器的功能进行功能测试生成（functional test generation），给出由 4 个输入赋值组成的测试集，并说明各测试检查什么。",
+    "answer": "观察 $a$ 时令 $x=1$，观察 $b$ 时令 $x=0$；同时让未选中的数据与选中的数据相反，以检查选择信号。一个合适测试集为\\begingroup\n\\begin{center}\\begin{tabular}{ccccc}\n\\hline\n目标故障 & $(x,b,a)$ & 测试编号 & $y_{\\rm good}$ & $y_{\\rm faulty}$ \\\\\n\\hline\n$a/1$ & 110 & $t_6$ & 0 & 1 \\\\\n$a/0$ & 101 & $t_5$ & 1 & 0 \\\\\n$b/1$ & 001 & $t_1$ & 0 & 1 \\\\\n$b/0$ & 010 & $t_2$ & 1 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n\\[\nT=\\{t_1,t_2,t_5,t_6\\}.\n\\]\n其中 $t_1,t_6$ 也检测 $x/1,x/0$ 的选择错误。",
+    "key_points": [
+      "观察哪个数据输入，就先选择对应通道。",
+      "必须同时满足故障激励与输出可观察。",
+      "测试编号必须明确变量位序。"
+    ],
+    "lab_kind": "fault-cover",
+    "problem_id": "T7-P1",
+    "number": 54,
+    "qid": "Q054",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T7-P1-b",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "b",
+    "question": "对所有 8 个输入向量，计算无故障输出 $y$，并对图中全部 22 个单 stuck-at 故障计算故障输出 $y(f_\\mu)$，完成故障仿真表。",
+    "answer": "各表项是故障电路的实际输出值，不是“是否检测”的标志。下表分成两个编号区间，避免22列过密。\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccccc}\n\\hline\n$t_\\nu$ & $xba$ & $y$ & $f_{1}$ & $f_{2}$ & $f_{3}$ & $f_{4}$ & $f_{5}$ & $f_{6}$ & $f_{7}$ & $f_{8}$ & $f_{9}$ & $f_{10}$ & $f_{11}$ \\\\\n\\hline\n0 & 000 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\\n1 & 001 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\\\\n2 & 010 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\\\\n3 & 011 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 \\\\\n4 & 100 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\\n5 & 101 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\\\\n6 & 110 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 \\\\\n7 & 111 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccccc}\n\\hline\n$t_\\nu$ & $xba$ & $y$ & $f_{12}$ & $f_{13}$ & $f_{14}$ & $f_{15}$ & $f_{16}$ & $f_{17}$ & $f_{18}$ & $f_{19}$ & $f_{20}$ & $f_{21}$ & $f_{22}$ \\\\\n\\hline\n0 & 000 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n1 & 001 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n2 & 010 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 1 \\\\\n3 & 011 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 1 \\\\\n4 & 100 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n5 & 101 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\\\\n6 & 110 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\\\\n7 & 111 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "干线故障会影响全部扇出分支，支路故障只作用于该支路。",
+      "表内先写实际输出，再与无故障输出比较。",
+      "每列仅注入一个故障，不能把多个故障同时带入。"
+    ],
+    "lab_kind": "fault-cover",
+    "problem_id": "T7-P1",
+    "number": 55,
+    "qid": "Q055",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T7-P1-c",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "c",
+    "question": "建立完整故障覆盖表（fault covering table）。该表具有哪项特殊现象？解释其电路原因。",
+    "answer": "覆盖表定义为 $R_{\\nu\\mu}=y(t_\\nu)\\oplus y(t_\\nu,f_\\mu)$；1表示该向量可检测该故障，0表示不能。\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccccccccccc}\n\\hline\n$t_\\nu$ & $xba$ & $f_{1}$ & $f_{2}$ & $f_{3}$ & $f_{4}$ & $f_{5}$ & $f_{6}$ & $f_{7}$ & $f_{8}$ & $f_{9}$ & $f_{10}$ & $f_{11}$ \\\\\n\\hline\n0 & 000 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\\n1 & 001 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\\\\n2 & 010 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\\\\n3 & 011 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\n4 & 100 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\\n5 & 101 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\\\\n6 & 110 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 \\\\\n7 & 111 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccccccccccc}\n\\hline\n$t_\\nu$ & $xba$ & $f_{12}$ & $f_{13}$ & $f_{14}$ & $f_{15}$ & $f_{16}$ & $f_{17}$ & $f_{18}$ & $f_{19}$ & $f_{20}$ & $f_{21}$ & $f_{22}$ \\\\\n\\hline\n0 & 000 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n1 & 001 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n2 & 010 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\\\\n3 & 011 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\\\\n4 & 100 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\\\\n5 & 101 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\n6 & 110 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\\\\n7 & 111 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n$f_{12}=e/1$ 与 $f_{14}=f/1$ 两列全为 0，不可检测。原因是 $e,f$ 来自同一信号，原本用于把二输入 NAND 当作反相器：若源信号为 0，另一条正常分支仍为 0，使 NAND 输出保持 1；若源信号为 1，强制某一输入为 1 又没有激励差异。这是冗余造成的不可测故障。",
+    "key_points": [
+      "覆盖表是正常输出和故障输出的 XOR。",
+      "全0列意味着该故障没有任何检测向量。",
+      "冗余导致不可测，不意味着故障没有被建模。"
+    ],
+    "lab_kind": "fault-cover",
+    "problem_id": "T7-P1",
+    "number": 56,
+    "qid": "Q056",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T7-P1-d",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "d",
+    "question": "列出所有不可区分故障（non-distinguishable faults）的非平凡等价组。",
+    "answer": "具有相同检测列的可测非平凡等价组为\n\\[\n\\begin{aligned}\nF_{U1}&=\\{f_1,f_7,f_{16}\\},\\\\\nF_{U2}&=\\{f_3,f_{10},f_{17},f_{20}\\},\\\\\nF_{U3}&=\\{f_9,f_{11},f_{13},f_{18}\\},\\\\\nF_{U4}&=\\{f_{15},f_{19},f_{22}\\}.\n\\end{aligned}\n\\]\n另外，$\\{f_{12},f_{14}\\}$ 均不可测，彼此及无故障行为均不可区分，应单独作为不可测组处理。其余 $f_2,f_4,f_5,f_6,f_8,f_{21}$ 分别为单元素组。",
+    "key_points": [
+      "比较的是完整检测列，而不是只比较某一个测试。",
+      "区分“等价故障”和“当前未检测故障”。",
+      "不可测组在后续可测覆盖任务中应排除。"
+    ],
+    "lab_kind": "fault-cover",
+    "notes": "正式答案只列可检测的四个非平凡组；这里另明确不可测组，避免将其遗漏或误当需要覆盖的列。",
+    "problem_id": "T7-P1",
+    "number": 57,
+    "qid": "Q057",
+    "answer_figures": []
+  },
+  {
+    "id": "T7-P1-e",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "e",
+    "question": "构造仅保留可测且可区分故障的缩减覆盖表。每个不可区分故障组都选择编号最小的故障为代表。",
+    "answer": "删去不可测列并做等价折叠，保留列为 $\\{1,2,3,4,5,6,8,9,15,21\\}$：\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccccccccc}\n\\hline\n$t_\\nu$ & $f_{1}$ & $f_{2}$ & $f_{3}$ & $f_{4}$ & $f_{5}$ & $f_{6}$ & $f_{8}$ & $f_{9}$ & $f_{15}$ & $f_{21}$ \\\\\n\\hline\n0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\n1 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\\\\n2 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\\\\n3 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\\\\n4 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\n5 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\\\\n6 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\\\\n7 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "先排除不可测列，再做等价故障折叠。",
+      "每组选最小编号代表，保持与原编号映射一致。",
+      "缩减覆盖表不等于删除检测向量。"
+    ],
+    "lab_kind": "fault-cover",
+    "problem_id": "T7-P1",
+    "number": 58,
+    "qid": "Q058",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T7-P1-f",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "f",
+    "question": "为缩减覆盖表建立完整测试集条件\n\\[\nC_{M,N}=\\bigwedge_{\\mu\\in M}\\bigvee_{\\nu\\in N}(t_\\nu Rf_\\mu)\\tau_\\nu=1,\n\\]\n其中 $\\tau_\\nu=1$ 表示选用测试 $t_\\nu$。化简并展开成积之和（sum of products），据此列出全部最小完整测试集。",
+    "answer": "依保留列的顺序，原覆盖条件为\n\\[\n\\begin{aligned}\nC={}&(\\tau_5+\\tau_7)(\\tau_4+\\tau_6)(\\tau_2+\\tau_3)\n(\\tau_0+\\tau_1)\\\\\n&(\\tau_5+\\tau_6)(\\tau_1+\\tau_2)\\tau_1\\tau_6\n(\\tau_0+\\tau_1+\\tau_4+\\tau_6)(\\tau_2+\\tau_3+\\tau_5+\\tau_7).\n\\end{aligned}\n\\]\n利用 $\\tau_1,\\tau_6$ 为必选项及吸收律，得到\n\\[\n\\begin{aligned}\nC&=\\tau_1\\tau_6(\\tau_5+\\tau_7)(\\tau_2+\\tau_3)\\\\\n&=\\tau_1\\tau_6\\tau_5\\tau_2+\\tau_1\\tau_6\\tau_5\\tau_3\\\\\n&\\quad+\\tau_1\\tau_6\\tau_7\\tau_2+\\tau_1\\tau_6\\tau_7\\tau_3.\n\\end{aligned}\n\\]\n四个最小完整测试集为\n\\[\n\\{t_1,t_2,t_5,t_6\\},\\quad\n\\{t_1,t_3,t_5,t_6\\},\\quad\n\\{t_1,t_2,t_6,t_7\\},\\quad\n\\{t_1,t_3,t_6,t_7\\}.\n\\]\n各有4个测试；完整测试集还包括这些集合的任意超集。",
+    "key_points": [
+      "每个故障列对应一个“至少选中某行”的 OR 条件。",
+      "全覆盖要求所有列条件同时成立。",
+      "积之和的每个乘积项对应一个候选测试集。"
+    ],
+    "lab_kind": "fault-cover",
+    "notes": "原题把 sum of products 误称为 conjunctive normal form。正确术语为析取范式（DNF）；合取范式是和之积。",
+    "problem_id": "T7-P1",
+    "number": 59,
+    "qid": "Q059",
+    "answer_figures": []
+  },
+  {
+    "id": "T7-P1-g",
+    "title": "多路选择器的故障仿真与最小测试覆盖",
+    "tutorial": 7,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第4至7页"
+    ],
+    "question_pages": [
+      74,
+      75
+    ],
+    "answer_pages": [
+      76,
+      77
+    ],
+    "context": "下图为二输入 NAND 门实现的多路选择器 $y=ax+b\\overline x$。干线和各扇出支路均视为独立故障位置。测试编号按位序 $(x,b,a)$ 编码：$t_\\nu$ 的三个输入即 $\\nu$ 的三位二进制表示。单故障编号依次如下，每次仅注入一个故障。\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccc}\n\\hline\n信号 & $a$ & $b$ & $x$ & $c$ & $d$ & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\ns-a-0编号 & 1 & 3 & 5 & 7 & 9 & 11 & 13 & 15 & 17 & 19 & 21 \\\\\ns-a-1编号 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "figures": [
+      {
+        "file": "assets/c_T7P1.png",
+        "caption": "NAND 多路选择器。c、d、e、f 为图中不同干线或支路。",
+        "width_mm": 110
+      }
+    ],
+    "label": "g",
+    "question": "使用覆盖表按“每次覆盖最多尚未覆盖故障”的准则选择测试，求一个完整测试集；说明平局处理。",
+    "answer": "采用缩减表，若覆盖数相同则选择编号较小的测试。完整选择过程为：\\begingroup\n\\begin{center}\\begin{tabular}{ccc}\n\\hline\n轮次 & 选择 & 本轮新增覆盖的代表故障 \\\\\n\\hline\n1 & $t_1$ & $\\{f_4,f_6,f_8,f_{15}\\}$ \\\\\n2 & $t_5$ & $\\{f_1,f_5,f_{21}\\}$ \\\\\n3 & $t_6$ & $\\{f_2,f_9\\}$ \\\\\n4 & $t_2$ & $\\{f_3\\}$ \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n故 $T=\\{t_1,t_2,t_5,t_6\\}$。平局时也可先选 $t_6$ 再选其他等效候选，最终集合可以不同；必须每一轮重新计算尚未覆盖的列数。本题贪心结果恰为4个测试，与精确解一致。",
+    "key_points": [
+      "贪心分数随已覆盖列删除而改变。",
+      "平局规则应写清楚，不能用不同规则的中间步骤混合。",
+      "贪心一般不保证最优，本题需要与精确覆盖结果核对。"
+    ],
+    "lab_kind": "fault-cover",
+    "problem_id": "T7-P1",
+    "number": 60,
+    "qid": "Q060",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-a",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "a",
+    "question": "建立输出 $y$ 与所有内部变量 $z_i\\ (i=1,\\ldots,4)$ 的完整真值表。",
+    "answer": "由电路逐级计算：\n\\[\nz_1=\\overline{x_2},\\quad z_2=\\overline{x_1+z_1}\n=\\overline{x_1}x_2,\\quad z_3=\\overline{x_3+x_4},\n\\quad z_4=\\overline{z_2+z_3},\\quad y=\\overline{z_4}.\n\\]\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccccc}\n\\hline\n$t_\\nu$ & $x_4x_3x_2x_1$ & $z_1$ & $z_2$ & $z_3$ & $z_4$ & $y$ \\\\\n\\hline\n0 & 0000 & 1 & 0 & 1 & 0 & 1 \\\\\n1 & 0001 & 1 & 0 & 1 & 0 & 1 \\\\\n2 & 0010 & 0 & 1 & 1 & 0 & 1 \\\\\n3 & 0011 & 0 & 0 & 1 & 0 & 1 \\\\\n4 & 0100 & 1 & 0 & 0 & 1 & 0 \\\\\n5 & 0101 & 1 & 0 & 0 & 1 & 0 \\\\\n6 & 0110 & 0 & 1 & 0 & 0 & 1 \\\\\n7 & 0111 & 0 & 0 & 0 & 1 & 0 \\\\\n8 & 1000 & 1 & 0 & 0 & 1 & 0 \\\\\n9 & 1001 & 1 & 0 & 0 & 1 & 0 \\\\\n10 & 1010 & 0 & 1 & 0 & 0 & 1 \\\\\n11 & 1011 & 0 & 0 & 0 & 1 & 0 \\\\\n12 & 1100 & 1 & 0 & 0 & 1 & 0 \\\\\n13 & 1101 & 1 & 0 & 0 & 1 & 0 \\\\\n14 & 1110 & 0 & 1 & 0 & 0 & 1 \\\\\n15 & 1111 & 0 & 0 & 0 & 1 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "按电路拓扑从输入向输出逐级求值。",
+      "NOR 的输出是 OR 后取反，注意每一个反相泡。",
+      "本题测试编号以x1为最低位。"
+    ],
+    "lab_kind": "boolean-difference",
+    "problem_id": "T8-P1",
+    "number": 61,
+    "qid": "Q061",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-b",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "b",
+    "question": "在真值表中加入仅反转 $z_1$ 和仅反转 $z_3$ 时的输出列 $y(\\overline{z_1})$、$y(\\overline{z_3})$。",
+    "answer": "反转 $z_1$ 后，第一层 NOR 的输入变成 $x_2$，故\n\\[\ny(\\overline{z_1})=\\overline{x_1}\\,\\overline{x_2}\n+\\overline{x_3}\\,\\overline{x_4}.\n\\]\n反转 $z_3$ 后，\n\\[\ny(\\overline{z_3})=\\overline{x_1}x_2+\n\\overline{\\overline{x_3}\\,\\overline{x_4}}\n=\\overline{x_1}x_2+x_3+x_4.\n\\]\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{ccccc}\n\\hline\n$t_\\nu$ & $x_4x_3x_2x_1$ & $y$ & $y(\\overline{z_1})$ & $y(\\overline{z_3})$ \\\\\n\\hline\n0 & 0000 & 1 & 1 & 0 \\\\\n1 & 0001 & 1 & 1 & 0 \\\\\n2 & 0010 & 1 & 1 & 1 \\\\\n3 & 0011 & 1 & 1 & 0 \\\\\n4 & 0100 & 0 & 1 & 1 \\\\\n5 & 0101 & 0 & 0 & 1 \\\\\n6 & 0110 & 1 & 0 & 1 \\\\\n7 & 0111 & 0 & 0 & 1 \\\\\n8 & 1000 & 0 & 1 & 1 \\\\\n9 & 1001 & 0 & 0 & 1 \\\\\n10 & 1010 & 1 & 0 & 1 \\\\\n11 & 1011 & 0 & 0 & 1 \\\\\n12 & 1100 & 0 & 1 & 1 \\\\\n13 & 1101 & 0 & 0 & 1 \\\\\n14 & 1110 & 1 & 0 & 1 \\\\\n15 & 1111 & 0 & 0 & 1 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "只反转指定内部节点，下游门必须重新计算。",
+      "其余输入和上游节点维持无故障值。",
+      "内部反转故障模型与输出取反不是同一件事。"
+    ],
+    "lab_kind": "boolean-difference",
+    "problem_id": "T8-P1",
+    "number": 62,
+    "qid": "Q062",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-c",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "c",
+    "question": "在真值表中加入 $z_1$ 和 $z_3$ 的布尔差（Boolean difference）$y_{z_i}=y(z_i)\\oplus y(\\overline{z_i})$。",
+    "answer": "逐行将正常输出和对应反转输出做 XOR，可得\n\\[\ny_{z_1}=\\overline{x_1}(x_3+x_4),\\qquad\ny_{z_3}=x_1+\\overline{x_2}.\n\\]\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccc}\n\\hline\n$t_\\nu$ & $x_4x_3x_2x_1$ & $y_{z_1}$ & $y_{z_3}$ \\\\\n\\hline\n0 & 0000 & 0 & 1 \\\\\n1 & 0001 & 0 & 1 \\\\\n2 & 0010 & 0 & 0 \\\\\n3 & 0011 & 0 & 1 \\\\\n4 & 0100 & 1 & 1 \\\\\n5 & 0101 & 0 & 1 \\\\\n6 & 0110 & 1 & 0 \\\\\n7 & 0111 & 0 & 1 \\\\\n8 & 1000 & 1 & 1 \\\\\n9 & 1001 & 0 & 1 \\\\\n10 & 1010 & 1 & 0 \\\\\n11 & 1011 & 0 & 1 \\\\\n12 & 1100 & 1 & 1 \\\\\n13 & 1101 & 0 & 1 \\\\\n14 & 1110 & 1 & 0 \\\\\n15 & 1111 & 0 & 1 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "布尔差为1表示该处翻转能传到输出。",
+      "布尔差不包含某一stuck-at故障的激励条件。",
+      "XOR比较两种输出，不是做普通减法。"
+    ],
+    "lab_kind": "boolean-difference",
+    "problem_id": "T8-P1",
+    "number": 63,
+    "qid": "Q063",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-d",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "d",
+    "question": "哪些输入赋值可以检测 $z_1,z_3$ 处的 stuck-at 故障？分别列出 s-a-0 和 s-a-1 的全部测试。",
+    "answer": "检测条件为\n\\[\nz_i/0:\\ z_i\\,y_{z_i}=1,\\qquad\nz_i/1:\\ \\overline{z_i}\\,y_{z_i}=1.\n\\]\n因此全部测试为\n\\[\n\\begin{aligned}\nT(z_1/0)&=\\{t_4,t_8,t_{12}\\},\\\\\nT(z_1/1)&=\\{t_6,t_{10},t_{14}\\},\\\\\nT(z_3/0)&=\\{t_0,t_1,t_3\\},\\\\\nT(z_3/1)&=\\{t_4,t_5,t_7,t_8,t_9,t_{11},t_{12},t_{13},t_{15}\\}.\n\\end{aligned}\n\\]\n例如 $t_4=(x_4x_3x_2x_1)=0100$ 时，$z_1=1$ 且 $y_{z_1}=1$，所以检测 $z_1/0$，但不能检测尚未激励的 $z_1/1$。",
+    "key_points": [
+      "检测=激励且传播；不能仅从布尔差列选向量。",
+      "s-a-0需正常节点为1，s-a-1需正常节点为0。",
+      "“全部测试”应列清每个故障的完整集合。"
+    ],
+    "lab_kind": "boolean-difference",
+    "problem_id": "T8-P1",
+    "number": 64,
+    "qid": "Q064",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-e",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "e",
+    "question": "将输出函数 $y$ 转换到 AND-XOR 系统；计算对所有原始输入变量的布尔差，并将结果写成 AND-OR-NOT 形式。",
+    "answer": "使用 $\\overline u=1\\oplus u$ 及 $u+v=u\\oplus v\\oplus uv$，展开并消去出现偶数次的项：\n\\[\n\\begin{aligned}\ny={}&1\\oplus x_3\\oplus x_4\\oplus x_3x_4\\\\\n&\\oplus x_2x_3\\oplus x_2x_4\\oplus x_2x_3x_4\\\\\n&\\oplus x_1x_2x_3\\oplus x_1x_2x_4\\oplus x_1x_2x_3x_4.\n\\end{aligned}\n\\]\n在 AND-XOR 多项式中，对 $x_i$ 求布尔差相当于取出所有含 $x_i$ 的项并去掉该因子。化回 AND-OR-NOT 得\n\\[\n\\begin{aligned}\ny_{x_1}&=x_2(x_3+x_4),\\\\\ny_{x_2}&=\\overline{x_1}(x_3+x_4),\\\\\ny_{x_3}&=\\overline{x_4}(x_1+\\overline{x_2}),\\\\\ny_{x_4}&=\\overline{x_3}(x_1+\\overline{x_2}).\n\\end{aligned}\n\\]",
+    "key_points": [
+      "OR不能直接替换为XOR，必须加上乘积修正项。",
+      "AND-XOR表达式中相同项出现两次会抵消。",
+      "布尔差是离散逻辑运算，不是实数微积分。"
+    ],
+    "lab_kind": "boolean-difference",
+    "problem_id": "T8-P1",
+    "number": 65,
+    "qid": "Q065",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T8-P1-f",
+    "title": "NOR 网络的布尔差与测试条件",
+    "tutorial": 8,
+    "problem": "1",
+    "sources": [
+      "5.pdf 第8至9页"
+    ],
+    "question_pages": [
+      78
+    ],
+    "answer_pages": [
+      80,
+      81,
+      82
+    ],
+    "context": "给定 $y=\\overline{x_1}x_2+\\overline{x_3}\\,\\overline{x_4}$，其 NOR 门实现如下。内部变量为 $z_1,z_2,z_3,z_4$。所有测试编号按 $(x_4,x_3,x_2,x_1)$ 编码为 $t_0,\\ldots,t_{15}$。记 $y(\\overline{z_i})$ 为仅将该内部信号的值反转、再向后计算得到的输出；它不是对整个输出 $y$ 取反。",
+    "figures": [
+      {
+        "file": "assets/c_T8P1.png",
+        "caption": "NOR 网络及四个内部信号。",
+        "width_mm": 110
+      }
+    ],
+    "label": "f",
+    "question": "分别将 $z_1,z_2,z_3,z_4$ 视为独立内部输入，写出对应下游函数 $y(z_i)$，转换到 AND-XOR 系统；计算各 $y_{z_i}$ 并写成 AND-OR-NOT 形式。",
+    "answer": "把指定内部节点独立化后，保留其下游逻辑。以下给出只含 AND、XOR、常数的形式（允许因式分解）：\n\\[\n\\begin{aligned}\ny(z_1)&=\\overline{x_1}\\,\\overline{z_1}\n+\\overline{x_3}\\,\\overline{x_4}\\\\\n&=1\\oplus(x_1\\oplus z_1\\oplus x_1z_1)\n(x_3\\oplus x_4\\oplus x_3x_4),\\\\\ny(z_2)&=z_2+\\overline{x_3}\\,\\overline{x_4}\\\\\n&=1\\oplus(1\\oplus z_2)(x_3\\oplus x_4\\oplus x_3x_4),\\\\\ny(z_3)&=\\overline{x_1}x_2+z_3\\\\\n&=x_2\\oplus x_1x_2\\oplus z_3\\oplus x_2z_3\\oplus x_1x_2z_3,\\\\\ny(z_4)&=\\overline{z_4}=1\\oplus z_4.\n\\end{aligned}\n\\]\n各内部布尔差为\n\\[\n\\begin{aligned}\ny_{z_1}&=\\overline{x_1}(x_3+x_4),&\ny_{z_2}&=x_3+x_4,\\\\\ny_{z_3}&=x_1+\\overline{x_2},&\ny_{z_4}&=1.\n\\end{aligned}\n\\]\n求 $y_{z_i}$ 时，仅翻转独立化后的 $z_i$，不要同时把其上游原始变量也翻转。",
+    "key_points": [
+      "内部节点独立化后，求的是它到输出的敏感性。",
+      "确定下游函数再转换代数形式，避免误带上游约束。",
+      "最终反相器的输入对输出永远敏感。"
+    ],
+    "lab_kind": "boolean-difference",
+    "notes": "正式解答中 z3 的某处中间AND-XOR式误写成z2；本答案已按原电路与16行枚举结果更正。",
+    "problem_id": "T8-P1",
+    "number": 66,
+    "qid": "Q066",
+    "answer_figures": []
+  },
+  {
+    "id": "T9-P1-a",
+    "title": "扇出干线、无扇出区域与故障仿真",
+    "tutorial": 9,
+    "problem": "1",
+    "sources": [
+      "6.pdf 第1至3页"
+    ],
+    "question_pages": [
+      84
+    ],
+    "answer_pages": [
+      86,
+      87
+    ],
+    "context": "给定下图组合电路。$b$ 分成 $b_1,b_2$ 两支，$e$ 分成 $e_1,e_2$ 两支；干线和支路分别建模。整个题目采用测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$。每次仅考虑一个永久 stuck-at 故障。",
+    "figures": [
+      {
+        "file": "assets/c_T9P1.png",
+        "caption": "组合电路与明确标出的扇出干线、支路。",
+        "width_mm": 130
+      }
+    ],
+    "label": "a",
+    "question": "给出该电路建模的全部 stuck-at 故障集合 $F$。",
+    "answer": "故障位置集合为\n\\[\nV=\\{a,b,b_1,b_2,c,d,e,e_1,e_2,f,g,h,i,y\\}.\n\\]\n每一位置分别建模 s-a-0 与 s-a-1，因此完整集合可精确写为\n\\[\nF=\\{v/0,\\ v/1\\mid v\\in V\\},\\qquad |F|=14\\times2=28.\n\\]\n其中 $b/0$ 作用于两条分支，而 $b_1/0$、$b_2/0$ 分别只作用于一条分支，不能合并成同一个故障位置；$e$ 的情况同理。",
+    "key_points": [
+      "列故障位置时要包含干线和独立支路。",
+      "二值stuck-at模型每个位置有两个单故障。",
+      "单故障假设是每次只注入一个故障。"
+    ],
+    "lab_kind": "fault-simulation",
+    "problem_id": "T9-P1",
+    "number": 67,
+    "qid": "Q067",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T9-P1-b",
+    "title": "扇出干线、无扇出区域与故障仿真",
+    "tutorial": 9,
+    "problem": "1",
+    "sources": [
+      "6.pdf 第1至3页"
+    ],
+    "question_pages": [
+      84
+    ],
+    "answer_pages": [
+      86,
+      87
+    ],
+    "context": "给定下图组合电路。$b$ 分成 $b_1,b_2$ 两支，$e$ 分成 $e_1,e_2$ 两支；干线和支路分别建模。整个题目采用测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$。每次仅考虑一个永久 stuck-at 故障。",
+    "figures": [
+      {
+        "file": "assets/c_T9P1.png",
+        "caption": "组合电路与明确标出的扇出干线、支路。",
+        "width_mm": 130
+      }
+    ],
+    "label": "b",
+    "question": "在测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$ 下进行无故障仿真（good simulation），求全部信号值，并列出被激励的故障。",
+    "answer": "按图逐级计算：\n\\[\ne=a+b=1,\\quad f=\\overline b=0,\\quad\ng=e_2c=0,\\quad h=fd=0,\\quad i=g+h=0,\\quad y=e_1i=0.\n\\]\n全部信号值如下：\n\\begingroup\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{center}\\begin{tabular}{cccccccccccccc}\n\\hline\n$a$ & $b$ & $b_1$ & $b_2$ & $c$ & $d$ & $e$ & $e_1$ & $e_2$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\n1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n被激励的故障为与正常值相反的 stuck-at 值：\n\\[\n\\begin{aligned}\nF'=\\{&a/0,b/0,b_1/0,b_2/0,c/1,d/0,\\\\\n&e/0,e_1/0,e_2/0,f/1,g/1,h/1,i/1,y/1\\}.\n\\end{aligned}\n\\]\n这里只判定激励，不能据此断言这些故障都能传到输出。",
+    "key_points": [
+      "激励某个stuck-at故障需正常值与其相反。",
+      "先保留各支路的正常值，再进行局部敏感性分析。",
+      "正常内部值必须与输入向量和门功能一致。"
+    ],
+    "lab_kind": "fault-simulation",
+    "notes": "正式解答第86页的正常值元组有排版/数值错误；本表按原电路和1101重新计算，与笔记中的电路标值一致。",
+    "problem_id": "T9-P1",
+    "number": 68,
+    "qid": "Q068",
+    "answer_figures": []
+  },
+  {
+    "id": "T9-P1-c",
+    "title": "扇出干线、无扇出区域与故障仿真",
+    "tutorial": 9,
+    "problem": "1",
+    "sources": [
+      "6.pdf 第1至3页"
+    ],
+    "question_pages": [
+      84
+    ],
+    "answer_pages": [
+      86,
+      87
+    ],
+    "context": "给定下图组合电路。$b$ 分成 $b_1,b_2$ 两支，$e$ 分成 $e_1,e_2$ 两支；干线和支路分别建模。整个题目采用测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$。每次仅考虑一个永久 stuck-at 故障。",
+    "figures": [
+      {
+        "file": "assets/c_T9P1.png",
+        "caption": "组合电路与明确标出的扇出干线、支路。",
+        "width_mm": 130
+      }
+    ],
+    "label": "c",
+    "question": "采用事件驱动故障仿真（event-driven fault simulation）分析扇出干线 $b$ 和 $e$。分别注入当前已激励的干线故障，列出变化传播，并判断它们在 $y$ 处是否可观察。",
+    "answer": "正常值 $b=e=1$，故分别注入 $b/0$ 和 $e/0$。\n\n对 $b/0$：两条支路同时变为 0。由于 $a=1$，$e=a+b_1$ 仍为1，故上方支路被屏蔽；下方支路依次传播：\n\\[\nb_2:1\\to0,\\ f:0\\to1,\\ h:0\\to1,\\ i:0\\to1,\\ y:0\\to1.\n\\]\n所以 $b$ 可观察。\n\n对 $e/0$：$e_1,e_2$ 同时由1变0。由于 $c=0$，$g$ 仍为0；$h=0$，所以 $i=0$。最终 $y=e_1i$ 仍为0，故 $e$ 不可观察。\n\\begingroup\n\\begin{center}\\begin{tabular}{ccccccc}\n\\hline\n情况 & $e$ & $f$ & $g$ & $h$ & $i$ & $y$ \\\\\n\\hline\n无故障 & 1 & 0 & 0 & 0 & 0 & 0 \\\\\n$b/0$ & 1 & 1 & 0 & 1 & 1 & 1 \\\\\n$e/0$ & 0 & 0 & 0 & 0 & 0 & 0 \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup",
+    "key_points": [
+      "干线故障必须同时改变所有对应分支。",
+      "事件驱动仿真只继续处理发生变化的下游节点。",
+      "激励后仍可能被控制值屏蔽。"
+    ],
+    "lab_kind": "fault-simulation",
+    "problem_id": "T9-P1",
+    "number": 69,
+    "qid": "Q069",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T9-P1-d",
+    "title": "扇出干线、无扇出区域与故障仿真",
+    "tutorial": 9,
+    "problem": "1",
+    "sources": [
+      "6.pdf 第1至3页"
+    ],
+    "question_pages": [
+      84
+    ],
+    "answer_pages": [
+      86,
+      87
+    ],
+    "context": "给定下图组合电路。$b$ 分成 $b_1,b_2$ 两支，$e$ 分成 $e_1,e_2$ 两支；干线和支路分别建模。整个题目采用测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$。每次仅考虑一个永久 stuck-at 故障。",
+    "figures": [
+      {
+        "file": "assets/c_T9P1.png",
+        "caption": "组合电路与明确标出的扇出干线、支路。",
+        "width_mm": 130
+      }
+    ],
+    "label": "d",
+    "question": "画出标明无扇出区域（fanout-free regions）的修改后电路。从输出及已分析的扇出干线向输入方向合成局部可观察性，求在输出 $y$ 处全局可观察的所有变量。",
+    "answer": "在 $b,e$ 的扇出处切开，用独立边界支路 $b_1,b_2,e_1,e_2$ 表示。区域可分为根为 $b$ 的单信号区域、根为 $e$ 的 $\\{a,b_1,e\\}$ 区域，以及根为 $y$ 的其余组合树区域。下图中虚线处是扇出切分，粗线是可观察信号。\n\n从 $y=e_1i$ 向后：\n\\[\n\\begin{aligned}\ny_y&=1,&y_i&=e_1=1,&y_{e_1}&=i=0,\\\\\ny_g&=y_i\\overline h=1,&y_h&=y_i\\overline g=1,\\\\\ny_c&=y_ge_2=1,&y_{e_2}&=y_gc=0,\\\\\ny_f&=y_hd=1,&y_d&=y_hf=0,&y_{b_2}&=y_f=1.\n\\end{aligned}\n\\]\n结合(c)所得 $y_b=1,y_e=0$；上方区域中的 $a,b_1$ 均不可观察。因此\n\\[\nS^O=\\{b,b_2,c,f,g,h,i,y\\}.\n\\]",
+    "key_points": [
+      "无扇出区域内，沿唯一通路相乘局部布尔差。",
+      "扇出干线跨越重汇聚区域，不能简单将分支可观察性相加。",
+      "干线结果与分支结果要区分再合并。"
+    ],
+    "lab_kind": "fault-simulation",
+    "answer_figures": [
+      {
+        "file": "assets/c_T9P1_regions.png",
+        "caption": "切分后的无扇出区域及当前测试下的可观察信号。",
+        "width_mm": 145
+      }
+    ],
+    "problem_id": "T9-P1",
+    "number": 70,
+    "qid": "Q070",
+    "notes": []
+  },
+  {
+    "id": "T9-P1-e",
+    "title": "扇出干线、无扇出区域与故障仿真",
+    "tutorial": 9,
+    "problem": "1",
+    "sources": [
+      "6.pdf 第1至3页"
+    ],
+    "question_pages": [
+      84
+    ],
+    "answer_pages": [
+      86,
+      87
+    ],
+    "context": "给定下图组合电路。$b$ 分成 $b_1,b_2$ 两支，$e$ 分成 $e_1,e_2$ 两支；干线和支路分别建模。整个题目采用测试向量 $t_1=(a,b,c,d)=(1,1,0,1)$。每次仅考虑一个永久 stuck-at 故障。",
+    "figures": [
+      {
+        "file": "assets/c_T9P1.png",
+        "caption": "组合电路与明确标出的扇出干线、支路。",
+        "width_mm": 130
+      }
+    ],
+    "label": "e",
+    "question": "给出全部可观察变量集合 $S^O$，以及由测试 $t_1$ 真正检测到的故障集合 $F^{t_1}$。",
+    "answer": "\\[\nS^O=\\{b,b_2,c,f,g,h,i,y\\}.\n\\]\n将可观察性与(b)的激励集合相交，可得\n\\[\nF^{t_1}=\\{b/0,b_2/0,c/1,f/1,g/1,h/1,i/1,y/1\\}.\n\\]\n共有8个故障。相应节点中 $b,b_2$ 的正常值为1，其余六个正常值为0，所以前两者检测 s-a-0，后六者检测 s-a-1。",
+    "key_points": [
+      "可观察变量集合不等于被测故障集合。",
+      "最终检测要求激励和可观察性同时满足。",
+      "故障方向由当前正常值决定。"
+    ],
+    "lab_kind": "fault-simulation",
+    "problem_id": "T9-P1",
+    "number": 71,
+    "qid": "Q071",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T10-P2-a",
+    "title": "D 算法：重汇聚路径、蕴含与回溯",
+    "tutorial": 10,
+    "problem": "2",
+    "sources": [
+      "6.pdf 第4至6页"
+    ],
+    "question_pages": [
+      90
+    ],
+    "answer_pages": [
+      94,
+      95
+    ],
+    "context": "给定下图组合电路。采用 $D=(1,0)$、$\\overline D=(0,1)$，二元组依次表示正常值与故障值；$X$ 表示未知。故障位于某条干线时，影响其全部扇出分支。",
+    "figures": [
+      {
+        "file": "assets/c_T10P2.png",
+        "caption": "包含 AND、NAND 和 XOR 门的原题电路。",
+        "width_mm": 115
+      }
+    ],
+    "label": "a",
+    "question": "D 算法中有哪些类型的信号赋值？决策树根节点和其他节点分别包含什么？何时需要回溯（backtrack），回溯时具体撤销什么、尝试什么？",
+    "answer": "四类赋值为：F（fault excitation，故障激励）、S（sensitization，为传播差异所必需的敏化赋值）、I（implication，由已有赋值必然推出的前向或后向蕴含）、O（optional assignment，为证明内部要求而作的可选决定）。\n\n根节点包含激励与传播要求，以及它们触发的全部蕴含。其余决策节点包含一个可选决定及由它推出的全部蕴含。\n\n例如 AND 输出要为1时两个输入必须为1，这是蕴含；OR 输出要为1时可以选左输入1，也可以选右输入1，这需要可选决定。当某个可选决定及其蕴含与已固定信号冲突时，撤销最近尚有替代方案的可选决定，以及依赖它的蕴含，然后尝试其他分支；保留不依赖该决定的有效约束。",
+    "key_points": [
+      "区分必然蕴含I与可选决定O。",
+      "激励、传播、证明内部赋值三层目标不能混淆。",
+      "回溯撤销依赖冲突决定的结果，不是随意改动故障激励。"
+    ],
+    "lab_kind": "d-algorithm",
+    "notes": "6.pdf中a项关于回溯的问句被划去，但下一页仍有对应讲解；本练习保留该问句作为选做复习。",
+    "problem_id": "T10-P2",
+    "number": 72,
+    "qid": "Q072",
+    "answer_figures": []
+  },
+  {
+    "id": "T10-P2-b",
+    "title": "D 算法：重汇聚路径、蕴含与回溯",
+    "tutorial": 10,
+    "problem": "2",
+    "sources": [
+      "6.pdf 第4至6页"
+    ],
+    "question_pages": [
+      90
+    ],
+    "answer_pages": [
+      94,
+      95
+    ],
+    "context": "给定下图组合电路。采用 $D=(1,0)$、$\\overline D=(0,1)$，二元组依次表示正常值与故障值；$X$ 表示未知。故障位于某条干线时，影响其全部扇出分支。",
+    "figures": [
+      {
+        "file": "assets/c_T10P2.png",
+        "caption": "包含 AND、NAND 和 XOR 门的原题电路。",
+        "width_mm": 115
+      }
+    ],
+    "label": "b",
+    "question": "列出从信号 $c$ 的 stuck-at 故障到输出 $y$ 的全部结构故障路径（structural fault-paths），包括可能的多路径组合。",
+    "answer": "先定义三条单路径：\n\\[\n\\begin{aligned}\nP_1&:c\\to e\\to f\\to y,\\\\\nP_2&:c\\to e\\to g\\to y,\\\\\nP_3&:c\\to g\\to y.\n\\end{aligned}\n\\]\n三种双路径组合和一种三路径组合为\n\\[\nP_1\\cup P_2,\\quad P_2\\cup P_3,\\quad\nP_1\\cup P_3,\\quad P_1\\cup P_2\\cup P_3.\n\\]\n总计7种结构组合。$P_1\\cup P_2$ 在 $e$ 后分成通往 $f,g$ 的两支；$P_2\\cup P_3$ 是 $c$ 经 $e$ 与直接进入 $g$ 的两条通路；$P_1\\cup P_3$ 分别到达 XOR 的两个输入。注意只写“节点集合”可能不能唯一表示这些边结构，例如几种多路径都包含同一组节点 $\\{c,e,f,g,y\\}$。结构上存在的路径不保证可以被逻辑赋值敏化。",
+    "key_points": [
+      "先找所有单路径，再明确多路径组合包含哪些边。",
+      "节点集合不一定能唯一标识路径结构。",
+      "结构存在与逻辑可敏化是两个不同问题。"
+    ],
+    "lab_kind": "d-algorithm",
+    "problem_id": "T10-P2",
+    "number": 73,
+    "qid": "Q073",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T10-P2-c",
+    "title": "D 算法：重汇聚路径、蕴含与回溯",
+    "tutorial": 10,
+    "problem": "2",
+    "sources": [
+      "6.pdf 第4至6页"
+    ],
+    "question_pages": [
+      90
+    ],
+    "answer_pages": [
+      94,
+      95
+    ],
+    "context": "给定下图组合电路。采用 $D=(1,0)$、$\\overline D=(0,1)$，二元组依次表示正常值与故障值；$X$ 表示未知。故障位于某条干线时，影响其全部扇出分支。",
+    "figures": [
+      {
+        "file": "assets/c_T10P2.png",
+        "caption": "包含 AND、NAND 和 XOR 门的原题电路。",
+        "width_mm": 115
+      }
+    ],
+    "label": "c",
+    "question": "对故障 $a/0$ 沿指定故障路径 $V_D=\\{a,d,f,y\\}$ 执行 D 算法，列出赋值类型并给出测试向量。",
+    "answer": "完整赋值链为：\\begingroup\n\\begin{center}\\begin{tabular}{ccc}\n\\hline\n赋值 & 类型 & 原因 \\\\\n\\hline\n$a=D$ & F & 激励$a/0$ \\\\\n$b=1$ & S & 使$a\\to d$敏感 \\\\\n$d=D$ & I & $d=ab$ \\\\\n$e=1$ & S & 使$d\\to f$敏感 \\\\\n$c=1$ & I & $e=bc=1$ \\\\\n$g=0$ & I & $g=\\overline{ec}$ \\\\\n$f=D$ & I & $f=de$ \\\\\n$y=D$ & I & $y=f\\oplus g=D\\oplus0$ \\\\\n\\hline\\end{tabular}\\end{center}\\endgroup\n所以测试向量为\n\\[\n(a,b,c)=(1,1,1).\n\\]\n正常输出为1，故障输出为0，差异沿所要求的路径到达 $y$；本例不需要可选决定，因此没有回溯分支。",
+    "key_points": [
+      "敏化AND门时旁路输入须为1。",
+      "内部赋值e=1必须继续向原始输入证明。",
+      "XOR另一输入确定为0时保留D的极性。"
+    ],
+    "lab_kind": "d-algorithm",
+    "problem_id": "T10-P2",
+    "number": 74,
+    "qid": "Q074",
+    "answer_figures": [],
+    "notes": []
+  },
+  {
+    "id": "T10-P2-d",
+    "title": "D 算法：重汇聚路径、蕴含与回溯",
+    "tutorial": 10,
+    "problem": "2",
+    "sources": [
+      "6.pdf 第4至6页"
+    ],
+    "question_pages": [
+      90
+    ],
+    "answer_pages": [
+      94,
+      95
+    ],
+    "context": "给定下图组合电路。采用 $D=(1,0)$、$\\overline D=(0,1)$，二元组依次表示正常值与故障值；$X$ 表示未知。故障位于某条干线时，影响其全部扇出分支。",
+    "figures": [
+      {
+        "file": "assets/c_T10P2.png",
+        "caption": "包含 AND、NAND 和 XOR 门的原题电路。",
+        "width_mm": 115
+      }
+    ],
+    "label": "d",
+    "question": "对故障 $e/0$ 沿 $V_D=\\{e,g,y\\}$ 求测试向量。特别检查：为了通过 XOR 门传播差异，其另一输入 $f$ 能否选择0或1？给出决策与回溯过程。",
+    "answer": "激励 $e/0$ 得 $e=D$；由正常 $e=bc=1$ 可推得 $b=c=1$。于是\n\\[\ng=\\overline{ec}=\\overline D.\n\\]\nXOR 在另一输入为0或1时局部都能传播差异，但这些赋值必须由电路实现：\n\n先试 $f=1$（O），由 $f=de=1$ 得 $d=1,e=1$（I），与已固定的 $e=D$ 冲突，回溯。改试 $f=0$（O），为了在两条电路中都保持 $f=0$，必须 $d=0$；又因 $b=1$，推出 $a=0$。\n\\[\ny=0\\oplus\\overline D=\\overline D,\\qquad\n(a,b,c)=(0,1,1).\n\\]\n正常电路 $(e,f,g,y)=(1,0,0,0)$；注入 $e/0$ 后为 $(0,0,1,1)$，测试成功。若取 $a=1$，则 $f=D$ 而非普通1，两个 XOR 输入同时含故障差异，$D\\oplus\\overline D=1$，最终被屏蔽。",
+    "key_points": [
+      "局部门允许某敏化值，不代表该值在全电路可实现。",
+      "D与普通1不同，强制e=1会丢失故障差异并形成冲突。",
+      "重汇聚可能使XOR两输入差异相互抵消。"
+    ],
+    "lab_kind": "d-algorithm",
+    "answer_figures": [
+      {
+        "file": "assets/c_T10P2_dtree.png",
+        "caption": "正式解答的决策树：f=1冲突，回溯后f=0成功。",
+        "width_mm": 125
+      }
+    ],
+    "problem_id": "T10-P2",
+    "number": 75,
+    "qid": "Q075",
+    "notes": []
+  },
+  {
+    "id": "T10-P3-d1",
+    "title": "仅用局部蕴含完成 f/0 的 D 搜索",
+    "tutorial": 10,
+    "problem": "3",
+    "sources": [
+      "6.pdf 第7页"
+    ],
+    "question_pages": [
+      91
+    ],
+    "answer_pages": [
+      96
+    ],
+    "context": "给定下图电路。采用 $D=(1,0)$、$\\overline D=(0,1)$，输入测试向量依次排列为 $(a,b,c,d,e,f)$。本题只取笔记实际演示的局部蕴含版本，不使用可控性排序或预存的全局学习关系。",
+    "figures": [
+      {
+        "file": "assets/c_T10P3.png",
+        "caption": "原题电路，最终输出为n。",
+        "width_mm": 100
+      }
+    ],
+    "label": "d1",
+    "question": "对故障 $f/0$ 执行 D 算法并求测试向量。允许局部蕴含（local implications）；遇到可选证明时不使用可控性（controllabilities），也不使用全局蕴含。画出决策树，展示一条成功分支及可选冲突分支。",
+    "answer": "激励与传播根节点为\n\\[\n\\begin{array}{c|c}\nf=D&F\\\\\ne=0,\\ l=0,\\ m=0&S\\\\\nj=D,\\ n=D&I\n\\end{array}\n\\]\n因为 $j=e+f$，$e=0$ 使 $f$ 的差异到达 $j$；最后的 OR 要求旁路 $l=m=0$。\n\n在内部 $h$ 处分支，可得到与笔记一致的决策树：\n\\[\n\\begin{array}{c}\n\\boxed{f=D;\\ e=l=m=0;\\ j=n=D}\\\\[2mm]\n\\swarrow\\hspace{48mm}\\searrow\\\\[-1mm]\n\\begin{array}{c}\n\\boxed{h=0\\ (O)}\\\\\n\\Downarrow\\\\\nc=0\\ (I),\\quad e=0\\\\\nl=hi=0,\\quad m=kh=0\\\\\n\\boxed{\\text{成功}}\n\\end{array}\n\\hspace{10mm}\n\\begin{array}{c}\n\\boxed{h=1\\ (O)}\\\\\n\\Downarrow\\\\\ni=0\\ (I)\\quad(l=hi=0)\\\\\nc=d=e=0\\ (I)\\\\\nh=c+e=0\\\\\n\\boxed{\\text{冲突，回溯}}\n\\end{array}\n\\end{array}\n\\]\n成功分支给出\n\\[\n(a,b,c,d,e,f)=(X,X,0,X,0,1).\n\\]\n验证：$c=e=0$ 使 $h=0$，因而 $l=m=0$，与 $a,b,d$ 无关；正常 $j=n=1$，故障 $j=n=0$。\n\n正式答案采用另一可选分支顺序，先尝试 $k=0$ 并遇到冲突，再选 $k=1,b=0,h=0$，得到更具体但同样有效的 $(X,0,0,X,0,1)$。D 算法的可选顺序不唯一；笔记结果省去了不必要的 $b=0$ 限制。",
+    "key_points": [
+      "最终OR的其他输入必须为0。",
+      "成功分支只需证明已有要求，不必决定无关信号。",
+      "可选分支冲突是正常搜索步骤，应撤销再换分支。"
+    ],
+    "lab_kind": "d-algorithm",
+    "notes": "6.pdf第7页只演示正式题d的局部蕴含版本；正式题a、b、c和d2、d3未在该笔记中出现，不收录。",
+    "problem_id": "T10-P3",
+    "number": 76,
+    "qid": "Q076",
+    "answer_figures": []
+  },
+  {
+    "id": "T11-P1-a(i)",
+    "title": "同步时序电路的最短测试序列",
+    "tutorial": 11,
+    "problem": "1",
+    "sources": [
+      "7.pdf 第1至2页"
+    ],
+    "question_pages": [
+      97
+    ],
+    "answer_pages": [
+      98,
+      99
+    ],
+    "context": "给定同步时序电路。两个存储元件是同时钟的主从 D 触发器，在各帧间同时更新。故障只在内部线 $z_3$，并持续存在于所有时间帧；其他信号无故障。初始寄存器状态未知，测试必须保证任意共同初态都能检测故障。",
+    "figures": [
+      {
+        "file": "assets/b_T11P1_circuit.png",
+        "caption": "原题同步时序电路。",
+        "width_mm": 140
+      }
+    ],
+    "label": "a(i)",
+    "question": "通过比较正常电路和故障电路，求 $z_3/0$ 的最短测试序列。给出状态传播和检测时刻。",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "answer": "先由电路写出\\[\nz_1=x_1s_1,\\quad z_2=z_1+s_2,\\quad z_3=\\overline{x_1s_1},\n\\qquad s_1^{t+1}=z_2^t,\\quad s_2^{t+1}=z_3^t,\\quad y=s_1x_2.\n\\]\n故障电路把所有帧的 $z_3$ 强制为 $0$，其他更新关系保持不变。取序列\\[\n\\begin{array}{c|ccc}\n\\text{帧}&t&t+1&t+2\\\\ \\hline\nx_1&0&0&X\\\\\nx_2&X&X&1\n\\end{array}\n\\]\n$X$ 表示可以任选的输入。以共同初态 $(s_1^t,s_2^t)=(p,q)$ 表示全部四种可能，其中 $p,q\\in\\{0,1\\}$。\n\\[\n\\begin{array}{c|c|c|c}\n\\text{帧}&x_1&\\text{正常现态 }(s_1,s_2)&\\text{故障现态 }(s_1,s_2)\\\\ \\hline\nt&0&(p,q)&(p,q)\\\\\nt+1&0&(q,1)&(q,0)\\\\\nt+2&X&(1,1)&(0,0)\n\\end{array}\n\\]\n第一帧 $x_1=0$ 保证正常 $z_3=1$，而故障值为 $0$。第一次时钟后差异到达 $s_2$；第二帧继续取 $x_1=0$，使 OR 的另一输入 $z_1=0$，差异经过 $z_2$。第二次时钟后正常 $s_1=1$、故障 $s_1=0$；取 $x_2=1$ 得 $y_{\\rm good}=1,y_{\\rm faulty}=0$。\n\n故障到输出的路径必须跨越 $s_2$ 与 $s_1$ 两级触发器，初态相同时不能在两次更新之前到达输出。因此最短为两个状态更新，加上最后观察帧，共三个输入帧。",
+    "key_points": [
+      "同一永久故障必须在每个展开时间帧中保留。",
+      "状态更新用上一帧组合输出，两个触发器同时更新。",
+      "未知初态下的序列应对所有共同初态有效。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "sequential",
+    "problem_id": "T11-P1",
+    "number": 77,
+    "qid": "Q077"
+  },
+  {
+    "id": "T11-P1-a(ii)",
+    "title": "同步时序电路的最短测试序列",
+    "tutorial": 11,
+    "problem": "1",
+    "sources": [
+      "7.pdf 第1至2页"
+    ],
+    "question_pages": [
+      97
+    ],
+    "answer_pages": [
+      98,
+      99
+    ],
+    "context": "给定同步时序电路。两个存储元件是同时钟的主从 D 触发器，在各帧间同时更新。故障只在内部线 $z_3$，并持续存在于所有时间帧；其他信号无故障。初始寄存器状态未知，测试必须保证任意共同初态都能检测故障。",
+    "figures": [
+      {
+        "file": "assets/b_T11P1_circuit.png",
+        "caption": "原题同步时序电路。",
+        "width_mm": 140
+      }
+    ],
+    "label": "a(ii)",
+    "question": "通过比较正常电路和故障电路，求 $z_3/1$ 的最短测试序列。给出状态准备、传播和检测时刻。",
+    "notes": "原笔记中划去，本册保留为选做。",
+    "answer": "状态方程为\\[\nz_1=x_1s_1,\\quad z_2=z_1+s_2,\\quad z_3=\\overline{x_1s_1},\n\\qquad s_1^{t+1}=z_2^t,\\quad s_2^{t+1}=z_3^t,\\quad y=s_1x_2.\n\\]\n故障电路每帧 $z_3=1$。要激励此故障，正常 $z_3$ 必须为 $0$，故需要 $x_1=s_1=1$。初态未知，必须先保证到达 $s_1=1$。取\\[\n\\begin{array}{c|ccccc}\n\\text{帧}&t-2&t-1&t&t+1&t+2\\\\ \\hline\nx_1&0&X&1&0&X\\\\\nx_2&X&X&X&X&1\n\\end{array}\n\\]\n令 $t-2$ 的共同初态为 $(p,q)$，$x_1^{t-1}=u$ 是任意二值输入。完整比较如下：\n\\[\n\\begin{array}{c|c|c|c}\n\\text{帧}&x_1&\\text{正常 }(s_1,s_2)&\\text{故障 }(s_1,s_2)\\\\ \\hline\nt-2&0&(p,q)&(p,q)\\\\\nt-1&u&(q,1)&(q,1)\\\\\nt&1&(1,\\overline{uq})&(1,1)\\\\\nt+1&0&(1,0)&(1,1)\\\\\nt+2&X&(0,1)&(1,1)\n\\end{array}\n\\]\n准备帧 $t-2$ 的 $x_1=0$ 使下一帧 $s_2=1$；OR 随后保证帧 $t$ 的 $s_1=1$。帧 $t$ 取 $x_1=1$ 激励故障，帧 $t+1$ 改为 $x_1=0$ 防止 $z_1=1$ 掩盖差异。帧 $t+2$ 取 $x_2=1$，得到正常输出 $0$、故障输出 $1$。\n\n未知初态下，不能在零帧或一帧准备后保证 $s_1=1$：一步后 $s_1'=x_1p+q$，当 $p=q=0$ 时必为 $0$。所以需要至少两帧准备；激励之后又必须跨两级存储元件。最短共四次状态更新、五个输入帧。",
+    "key_points": [
+      "激励 z3/1 需要正常 NAND 输出为 0。",
+      "必要状态必须从未知初态向前建立。",
+      "激励帧与传播帧的 x1 值不同，不能用一个静态向量代替。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "sequential",
+    "problem_id": "T11-P1",
+    "number": 78,
+    "qid": "Q078"
+  },
+  {
+    "id": "T11-P1-b(i)",
+    "title": "同步时序电路的最短测试序列",
+    "tutorial": 11,
+    "problem": "1",
+    "sources": [
+      "7.pdf 第1至2页"
+    ],
+    "question_pages": [
+      97
+    ],
+    "answer_pages": [
+      98,
+      99
+    ],
+    "context": "给定同步时序电路。两个存储元件是同时钟的主从 D 触发器，在各帧间同时更新。故障只在内部线 $z_3$，并持续存在于所有时间帧；其他信号无故障。初始寄存器状态未知，测试必须保证任意共同初态都能检测故障。",
+    "figures": [
+      {
+        "file": "assets/b_T11P1_circuit.png",
+        "caption": "原题同步时序电路。",
+        "width_mm": 140
+      }
+    ],
+    "label": "b(i)",
+    "question": "用 D 算法（D-algorithm）求 $z_3/0$ 的最短测试序列，写出跨时间帧的 D 链和必要赋值。",
+    "answer": "采用 $D=(1,0)$，括号内依次为正常值、故障值。激励 $z_3/0$，令 $z_3^t=D$。选择 $x_1^t=0$ 即可让正常 NAND 输出为 $1$，不依赖未知的 $s_1^t$。\n\n按触发器更新时间展开：\n\\[\n\\begin{aligned}\nz_3^t=D&\\ \\Longrightarrow\\ s_2^{t+1}=D,\\\\\nx_1^{t+1}=0&\\ \\Longrightarrow\\ z_1^{t+1}=0,\\\\\nz_2^{t+1}=0+D=D&\\ \\Longrightarrow\\ s_1^{t+2}=D,\\\\\nx_2^{t+2}=1&\\ \\Longrightarrow\\ y^{t+2}=D\\cdot1=D.\n\\end{aligned}\n\\]\n所以 D 链是\n\\[\nz_3^t\\longrightarrow s_2^{t+1}\\longrightarrow z_2^{t+1}\n\\longrightarrow s_1^{t+2}\\longrightarrow y^{t+2}.\n\\]\n最终序列为\\[\n\\begin{array}{c|ccc}\n\\text{帧}&t&t+1&t+2\\\\ \\hline\nx_1&0&0&X\\\\\nx_2&X&X&1\n\\end{array}\n\\]\n用课程赋值标记：$z_3^t=D$ 为 F（激励），两个 $x_1=0$ 是可行选择／敏化赋值，触发器和门的确定结果为 I（蕴含），末级 $x_2=1$ 为 S（敏化）。两个时钟边界决定该序列最短。",
+    "key_points": [
+      "D 经过触发器时保留极性，但进入下一时间帧。",
+      "OR 的旁路应置 0，AND 的旁路应置 1。",
+      "最终输出出现 D 或 Dbar 才构成检测。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "sequential",
+    "problem_id": "T11-P1",
+    "number": 79,
+    "qid": "Q079",
+    "notes": []
+  },
+  {
+    "id": "T11-P1-b(ii)",
+    "title": "同步时序电路的最短测试序列",
+    "tutorial": 11,
+    "problem": "1",
+    "sources": [
+      "7.pdf 第1至2页"
+    ],
+    "question_pages": [
+      97
+    ],
+    "answer_pages": [
+      98,
+      99
+    ],
+    "context": "给定同步时序电路。两个存储元件是同时钟的主从 D 触发器，在各帧间同时更新。故障只在内部线 $z_3$，并持续存在于所有时间帧；其他信号无故障。初始寄存器状态未知，测试必须保证任意共同初态都能检测故障。",
+    "figures": [
+      {
+        "file": "assets/b_T11P1_circuit.png",
+        "caption": "原题同步时序电路。",
+        "width_mm": 140
+      }
+    ],
+    "label": "b(ii)",
+    "question": "用 D 算法求 $z_3/1$ 的最短测试序列，补全状态准备与跨帧传播。",
+    "answer": "采用 $\\overline{D}=(0,1)$。激励 $z_3/1$ 需 $z_3^t=\\overline{D}$，于是正常 NAND 的两个输入必须为 $1$：\n\\[\nx_1^t=1,\\qquad s_1^t=1.\n\\]\n为保证共同的 $s_1^t=1$，向前补两帧准备：\n\\[\nx_1^{t-2}=0\\Rightarrow z_3^{t-2}=1\n\\Rightarrow s_2^{t-1}=1\n\\Rightarrow z_2^{t-1}=1\n\\Rightarrow s_1^t=1.\n\\]\n这些准备值在正常和故障电路中相同，因为故障本来就固定 $z_3=1$。因此 $x_1^{t-1}$ 可以任意。\n\n激励后向输出传播：\n\\[\n\\begin{aligned}\nz_3^t=\\overline{D}&\\Rightarrow s_2^{t+1}=\\overline{D},\\\\\nx_1^{t+1}=0&\\Rightarrow z_1^{t+1}=0,\\\\\nz_2^{t+1}=\\overline{D}&\\Rightarrow s_1^{t+2}=\\overline{D},\\\\\nx_2^{t+2}=1&\\Rightarrow y^{t+2}=\\overline{D}.\n\\end{aligned}\n\\]\n合并准备、激励与敏化赋值得到\\[\n\\begin{array}{c|ccccc}\n\\text{帧}&t-2&t-1&t&t+1&t+2\\\\ \\hline\nx_1&0&X&1&0&X\\\\\nx_2&X&X&X&X&1\n\\end{array}\n\\]\n两帧建立 $s_1=1$，两帧把差异传到输出，最后观察，因此共五帧。若误把准备阶段的未知状态直接设成 $1$，会得到依赖初态的短序列，并非原题要求的保证性测试。原笔记在本故障处只写省略号，这里按完整电路补全。",
+    "key_points": [
+      "反向状态证明与正向 D 传播都必须落实到输入帧。",
+      "z3/1 用 Dbar 激励，不能沿用 z3/0 的 D 极性。",
+      "准备、激励、传播、观察是不同时间帧的工作。"
+    ],
+    "answer_figures": [],
+    "lab_kind": "sequential",
+    "notes": "原手写笔记仅写省略号；本册以正常／故障逐帧验证补全。",
+    "problem_id": "T11-P1",
+    "number": 80,
+    "qid": "Q080"
+  }
+]
