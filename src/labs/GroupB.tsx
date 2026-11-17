@@ -257,6 +257,33 @@ function FsmLab({ part }: { part: string }) {
     <div className="result">现态 S{state} ↔ {groupLabels[reduced]}（{encoded.current}）；
       当前输出 y={fsmTable[state][input][1]}；下一状态寄存器输入 z={encoded.next}。
       {fsmGroup[state] === reduced ? ' 原机与最小机一致。' : ' 状态不一致。'}</div>
+    {part === 'e' && <div className="table-wrap"><svg viewBox="0 0 650 380" style={svgStyle} role="img" aria-label="动态Mealy实现电路：下一状态逻辑、两个同步D触发器、状态反馈与输出逻辑">
+      <title>组合逻辑计算z，两个D触发器在同一时钟同时更新；Q输出反馈为当前状态s</title>
+      <path d="M20 55 H395 M50 55 V120 H100 M300 145 H395 M300 225 H395 M485 145 H540 V90 H510 M485 225 H570 V90 H550 M540 145 V315 H60 V170 H100 M570 225 V340 H80 V210 H100 M575 55 H630"
+        fill="none" stroke={blue} strokeWidth="1.8" />
+      <circle cx="50" cy="55" r="3" fill={blue} /><circle cx="540" cy="145" r="3" fill={blue} /><circle cx="570" cy="225" r="3" fill={blue} />
+      <text x="18" y="42" fontSize="14">x={input}</text>
+      <rect x="100" y="100" width="200" height="140" rx="10" fill="#f1f5fa" stroke={blue} strokeWidth="1.7" />
+      <text x="200" y="127" textAnchor="middle" fontSize="15">下一状态组合逻辑 δ</text>
+      <text x="200" y="161" textAnchor="middle" fontSize="14">当前 s₁s₂={encoded.current}，x={input}</text>
+      <text x="200" y="191" textAnchor="middle" fontSize="16">z₁z₂={encoded.next}</text>
+      <text x="200" y="217" textAnchor="middle" fontSize="12">{hand ? '手写编码' : '正式答案编码'}</text>
+      {[0, 1].map(i => <g key={i}>
+        <rect x="395" y={120 + i * 80} width="90" height="60" rx="5" fill="#e1edf9" stroke={blue} strokeWidth="1.7" />
+        <text x="440" y={143 + i * 80} textAnchor="middle" fontSize="14">D FF{i + 1} Q</text>
+        <text x="440" y={165 + i * 80} textAnchor="middle" fontSize="16">{encoded.current[i]}</text>
+        <path d={'M395 ' + (160 + i * 80) + ' L405 ' + (165 + i * 80) + ' L395 ' + (170 + i * 80)} fill="none" stroke={amber} />
+        <text x="333" y={137 + i * 80} fontSize="13">z{i + 1}={encoded.next[i]}</text>
+        <text x="492" y={135 + i * 80} fontSize="13">s{i + 1}={encoded.current[i]}</text>
+      </g>)}
+      <path d="M335 280 H375 V165 H395 M375 245 H395" fill="none" stroke={amber} strokeWidth="1.7" />
+      <circle cx="375" cy="245" r="3" fill={amber} /><text x="323" y="302" fontSize="13" fill={amber}>共同 clock</text>
+      <rect x="395" y="25" width="180" height="65" rx="9" fill="#e4f4ec" stroke={green} strokeWidth="1.7" />
+      <text x="485" y="49" textAnchor="middle" fontSize="14">输出逻辑 λ(s₁,s₂,x)</text>
+      <text x="485" y="73" textAnchor="middle" fontSize="16">y={encoded.y}</text>
+      <text x="605" y="43" fontSize="14">y</text>
+      <text x="90" y="365" fontSize="12">反馈线携带当前状态；按“时钟步进”后，两寄存器才同时装入 z₁、z₂。</text>
+    </svg></div>}
     <div className="table-wrap"><svg viewBox="0 0 460 290" style={svgStyle} role="img" aria-label="最小Mealy状态图，绿色表示当前状态">
       <defs><marker id="b-fsm-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill={blue} /></marker></defs>
       {['M114 65 H290', 'M85 195 V96', 'M295 80 Q170 120 106 201', 'M320 95 V195', 'M296 220 Q205 232 104 86'].map((path, i) =>
